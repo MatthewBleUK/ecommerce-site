@@ -1,11 +1,11 @@
-function AnnouncementBar() {
+function AnnouncementBar(props) {
     return (
         <div
             id="announcementBar"
             className="h-12 flex items-center text-center"
         >
             <span className="grow text-white text-sm font-light">
-                Free Shipping to Bulgaria
+                {props.title}
             </span>
         </div>
     );
