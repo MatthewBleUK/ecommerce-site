@@ -4,6 +4,10 @@
 
 /* Announcement bar */
 
+#root {
+    min-width: 200px;
+}
+
 #announcementBar {
     background: linear-gradient(
         90deg,
