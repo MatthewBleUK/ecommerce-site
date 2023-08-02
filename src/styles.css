@@ -15,3 +15,9 @@
         rgba(26, 55, 80, 1) 100%
     );
 }
+
+/* Product grid */
+
+.product-item img {
+    height: 216px;
+}

@@ -7,12 +7,12 @@ function App(props) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="bg-white border-b border-zinc-300">
+        <header className="bg-white border-b border-zinc-300 sticky top-0 z-10">
             {/* Logo */}
             <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-9">
                 <div className="">
                     <img
-                        src="logo.png"
+                        src="logo-min.png"
                         className="w-100 h-10 mr-2"
                         alt="Logo"
                     />
@@ -59,7 +59,7 @@ function App(props) {
                                     onClick={() => setActiveContentIndex(index)}
                                 >
                                     <a
-                                        href="#"
+                                        href={item.toLowerCase()}
                                         className={`hover:border-gray-700 border-b pb-1.5 ${
                                             activeContentIndex === index
                                                 ? "border-gray-700"

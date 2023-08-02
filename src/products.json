@@ -1,0 +1,772 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "title": "Women's Sneakers",
+            "category": "shoes",
+            "desc": "Comfortable and stylish women's sneakers",
+            "img": "womens_sneakers-min.jpg",
+            "price": 79.99
+        },
+        {
+            "id": 2,
+            "title": "Women's High Heels",
+            "category": "shoes",
+            "desc": "Elegant and fashionable high heels for women",
+            "img": "womens_high_heels-min.jpg",
+            "price": 99.99
+        },
+        {
+            "id": 3,
+            "title": "Men's Running Shoes",
+            "category": "shoes",
+            "desc": "High-performance running shoes for men",
+            "img": "mens_running_shoes-min.jpeg",
+            "price": 89.99
+        },
+        {
+            "id": 4,
+            "title": "Kids' Sports Shoes",
+            "category": "shoes",
+            "desc": "Durable sports shoes for active kids",
+            "img": "kids_sports_shoes-min.jpg",
+            "price": 49.99
+        },
+        {
+            "id": 5,
+            "title": "Kids' Sports Shoes",
+            "category": "shoes",
+            "desc": "Durable sports shoes for active kids",
+            "img": "kids_sports_shoes-min.jpg",
+            "price": 49.99
+        },
+        {
+            "id": 6,
+            "title": "Men's Running Shoes",
+            "category": "shoes",
+            "desc": "High-performance running shoes for men",
+            "img": "mens_running_shoes-min.jpeg",
+            "price": 89.99
+        },
+        {
+            "id": 7,
+            "title": "Women's High Heels",
+            "category": "shoes",
+            "desc": "Elegant and fashionable high heels for women",
+            "img": "womens_high_heels-min.jpg",
+            "price": 99.99
+        },
+        {
+            "id": 8,
+            "title": "Women's Sneakers",
+            "category": "shoes",
+            "desc": "Comfortable and stylish women's sneakers",
+            "img": "womens_sneakers-min.jpg",
+            "price": 79.99
+        },
+        {
+            "id": 9,
+            "title": "Women's Sneakers",
+            "category": "shoes",
+            "desc": "Comfortable and stylish women's sneakers",
+            "img": "womens_sneakers-min.jpg",
+            "price": 79.99
+        },
+        {
+            "id": 10,
+            "title": "Women's High Heels",
+            "category": "shoes",
+            "desc": "Elegant and fashionable high heels for women",
+            "img": "womens_high_heels-min.jpg",
+            "price": 99.99
+        },
+        {
+            "id": 11,
+            "title": "Men's Running Shoes",
+            "category": "shoes",
+            "desc": "High-performance running shoes for men",
+            "img": "mens_running_shoes-min.jpeg",
+            "price": 89.99
+        },
+        {
+            "id": 12,
+            "title": "Kids' Sports Shoes",
+            "category": "shoes",
+            "desc": "Durable sports shoes for active kids",
+            "img": "kids_sports_shoes-min.jpg",
+            "price": 49.99
+        },
+        {
+            "id": 13,
+            "title": "Kids' Sports Shoes",
+            "category": "shoes",
+            "desc": "Durable sports shoes for active kids",
+            "img": "kids_sports_shoes-min.jpg",
+            "price": 49.99
+        },
+        {
+            "id": 14,
+            "title": "Men's Running Shoes",
+            "category": "shoes",
+            "desc": "High-performance running shoes for men",
+            "img": "mens_running_shoes-min.jpeg",
+            "price": 89.99
+        },
+        {
+            "id": 15,
+            "title": "Women's High Heels",
+            "category": "shoes",
+            "desc": "Elegant and fashionable high heels for women",
+            "img": "womens_high_heels-min.jpg",
+            "price": 99.99
+        },
+        {
+            "id": 16,
+            "title": "Women's Sneakers",
+            "category": "shoes",
+            "desc": "Comfortable and stylish women's sneakers",
+            "img": "womens_sneakers-min.jpg",
+            "price": 79.99
+        },
+        {
+            "id": 17,
+            "title": "Women's Sneakers",
+            "category": "shoes",
+            "desc": "Comfortable and stylish women's sneakers",
+            "img": "womens_sneakers-min.jpg",
+            "price": 79.99
+        },
+        {
+            "id": 18,
+            "title": "Women's High Heels",
+            "category": "shoes",
+            "desc": "Elegant and fashionable high heels for women",
+            "img": "womens_high_heels-min.jpg",
+            "price": 99.99
+        },
+        {
+            "id": 19,
+            "title": "Men's Running Shoes",
+            "category": "shoes",
+            "desc": "High-performance running shoes for men",
+            "img": "mens_running_shoes-min.jpeg",
+            "price": 89.99
+        },
+        {
+            "id": 20,
+            "title": "Kids' Sports Shoes",
+            "category": "shoes",
+            "desc": "Durable sports shoes for active kids",
+            "img": "kids_sports_shoes-min.jpg",
+            "price": 49.99
+        },
+        {
+            "id": 21,
+            "title": "Kids' Sports Shoes",
+            "category": "shoes",
+            "desc": "Durable sports shoes for active kids",
+            "img": "kids_sports_shoes-min.jpg",
+            "price": 49.99
+        },
+        {
+            "id": 22,
+            "title": "Men's Running Shoes",
+            "category": "shoes",
+            "desc": "High-performance running shoes for men",
+            "img": "mens_running_shoes-min.jpeg",
+            "price": 89.99
+        },
+        {
+            "id": 23,
+            "title": "Women's High Heels",
+            "category": "shoes",
+            "desc": "Elegant and fashionable high heels for women",
+            "img": "womens_high_heels-min.jpg",
+            "price": 99.99
+        },
+        {
+            "id": 24,
+            "title": "Women's Sneakers",
+            "category": "shoes",
+            "desc": "Comfortable and stylish women's sneakers",
+            "img": "womens_sneakers-min.jpg",
+            "price": 79.99
+        },
+        {
+            "id": 25,
+            "title": "Women's Sneakers",
+            "category": "shoes",
+            "desc": "Comfortable and stylish women's sneakers",
+            "img": "womens_sneakers-min.jpg",
+            "price": 79.99
+        },
+        {
+            "id": 26,
+            "title": "Women's High Heels",
+            "category": "shoes",
+            "desc": "Elegant and fashionable high heels for women",
+            "img": "womens_high_heels-min.jpg",
+            "price": 99.99
+        },
+        {
+            "id": 27,
+            "title": "Men's Running Shoes",
+            "category": "shoes",
+            "desc": "High-performance running shoes for men",
+            "img": "mens_running_shoes-min.jpeg",
+            "price": 89.99
+        },
+        {
+            "id": 28,
+            "title": "Kids' Sports Shoes",
+            "category": "shoes",
+            "desc": "Durable sports shoes for active kids",
+            "img": "kids_sports_shoes-min.jpg",
+            "price": 49.99
+        },
+        {
+            "id": 29,
+            "title": "Kids' Sports Shoes",
+            "category": "shoes",
+            "desc": "Durable sports shoes for active kids",
+            "img": "kids_sports_shoes-min.jpg",
+            "price": 49.99
+        },
+        {
+            "id": 30,
+            "title": "Men's Running Shoes",
+            "category": "shoes",
+            "desc": "High-performance running shoes for men",
+            "img": "mens_running_shoes-min.jpeg",
+            "price": 89.99
+        },
+        {
+            "id": 31,
+            "title": "Women's High Heels",
+            "category": "shoes",
+            "desc": "Elegant and fashionable high heels for women",
+            "img": "womens_high_heels-min.jpg",
+            "price": 99.99
+        },
+        {
+            "id": 32,
+            "title": "Women's Sneakers",
+            "category": "shoes",
+            "desc": "Comfortable and stylish women's sneakers",
+            "img": "womens_sneakers-min.jpg",
+            "price": 79.99
+        },
+        {
+            "id": 33,
+            "title": "Women's Shoulder Bag",
+            "category": "bags",
+            "desc": "Stylish and spacious shoulder bag for women",
+            "img": "womens_shoulder_bag-min.jpg",
+            "price": 59.99
+        },
+        {
+            "id": 34,
+            "title": "Men's Backpack",
+            "category": "bags",
+            "desc": "Versatile and sturdy backpack for men",
+            "img": "mens_backpack-min.jpg",
+            "price": 69.99
+        },
+        {
+            "id": 35,
+            "title": "Kids' School Backpack",
+            "category": "bags",
+            "desc": "Durable and practical school backpack for kids",
+            "img": "kids_school_backpack-min.jpg",
+            "price": 39.99
+        },
+        {
+            "id": 36,
+            "title": "Women's Clutch Purse",
+            "category": "bags",
+            "desc": "Elegant and compact clutch purse for women",
+            "img": "womens_clutch_purse-min.jpg",
+            "price": 39.99
+        },
+        {
+            "id": 37,
+            "title": "Women's Clutch Purse",
+            "category": "bags",
+            "desc": "Elegant and compact clutch purse for women",
+            "img": "womens_clutch_purse-min.jpg",
+            "price": 39.99
+        },
+        {
+            "id": 38,
+            "title": "Kids' School Backpack",
+            "category": "bags",
+            "desc": "Durable and practical school backpack for kids",
+            "img": "kids_school_backpack-min.jpg",
+            "price": 39.99
+        },
+        {
+            "id": 39,
+            "title": "Men's Backpack",
+            "category": "bags",
+            "desc": "Versatile and sturdy backpack for men",
+            "img": "mens_backpack-min.jpg",
+            "price": 69.99
+        },
+        {
+            "id": 40,
+            "title": "Women's Shoulder Bag",
+            "category": "bags",
+            "desc": "Stylish and spacious shoulder bag for women",
+            "img": "womens_shoulder_bag-min.jpg",
+            "price": 59.99
+        },
+        {
+            "id": 41,
+            "title": "Women's Shoulder Bag",
+            "category": "bags",
+            "desc": "Stylish and spacious shoulder bag for women",
+            "img": "womens_shoulder_bag-min.jpg",
+            "price": 59.99
+        },
+        {
+            "id": 42,
+            "title": "Men's Backpack",
+            "category": "bags",
+            "desc": "Versatile and sturdy backpack for men",
+            "img": "mens_backpack-min.jpg",
+            "price": 69.99
+        },
+        {
+            "id": 43,
+            "title": "Kids' School Backpack",
+            "category": "bags",
+            "desc": "Durable and practical school backpack for kids",
+            "img": "kids_school_backpack-min.jpg",
+            "price": 39.99
+        },
+        {
+            "id": 44,
+            "title": "Women's Clutch Purse",
+            "category": "bags",
+            "desc": "Elegant and compact clutch purse for women",
+            "img": "womens_clutch_purse-min.jpg",
+            "price": 39.99
+        },
+        {
+            "id": 45,
+            "title": "Women's Clutch Purse",
+            "category": "bags",
+            "desc": "Elegant and compact clutch purse for women",
+            "img": "womens_clutch_purse-min.jpg",
+            "price": 39.99
+        },
+        {
+            "id": 46,
+            "title": "Kids' School Backpack",
+            "category": "bags",
+            "desc": "Durable and practical school backpack for kids",
+            "img": "kids_school_backpack-min.jpg",
+            "price": 39.99
+        },
+        {
+            "id": 47,
+            "title": "Men's Backpack",
+            "category": "bags",
+            "desc": "Versatile and sturdy backpack for men",
+            "img": "mens_backpack-min.jpg",
+            "price": 69.99
+        },
+        {
+            "id": 48,
+            "title": "Women's Shoulder Bag",
+            "category": "bags",
+            "desc": "Stylish and spacious shoulder bag for women",
+            "img": "womens_shoulder_bag-min.jpg",
+            "price": 59.99
+        },
+        {
+            "id": 49,
+            "title": "Women's Shoulder Bag",
+            "category": "bags",
+            "desc": "Stylish and spacious shoulder bag for women",
+            "img": "womens_shoulder_bag-min.jpg",
+            "price": 59.99
+        },
+        {
+            "id": 50,
+            "title": "Men's Backpack",
+            "category": "bags",
+            "desc": "Versatile and sturdy backpack for men",
+            "img": "mens_backpack-min.jpg",
+            "price": 69.99
+        },
+        {
+            "id": 51,
+            "title": "Kids' School Backpack",
+            "category": "bags",
+            "desc": "Durable and practical school backpack for kids",
+            "img": "kids_school_backpack-min.jpg",
+            "price": 39.99
+        },
+        {
+            "id": 52,
+            "title": "Women's Clutch Purse",
+            "category": "bags",
+            "desc": "Elegant and compact clutch purse for women",
+            "img": "womens_clutch_purse-min.jpg",
+            "price": 39.99
+        },
+        {
+            "id": 53,
+            "title": "Women's Clutch Purse",
+            "category": "bags",
+            "desc": "Elegant and compact clutch purse for women",
+            "img": "womens_clutch_purse-min.jpg",
+            "price": 39.99
+        },
+        {
+            "id": 54,
+            "title": "Kids' School Backpack",
+            "category": "bags",
+            "desc": "Durable and practical school backpack for kids",
+            "img": "kids_school_backpack-min.jpg",
+            "price": 39.99
+        },
+        {
+            "id": 55,
+            "title": "Men's Backpack",
+            "category": "bags",
+            "desc": "Versatile and sturdy backpack for men",
+            "img": "mens_backpack-min.jpg",
+            "price": 69.99
+        },
+        {
+            "id": 56,
+            "title": "Women's Shoulder Bag",
+            "category": "bags",
+            "desc": "Stylish and spacious shoulder bag for women",
+            "img": "womens_shoulder_bag-min.jpg",
+            "price": 59.99
+        },
+        {
+            "id": 57,
+            "title": "Women's Shoulder Bag",
+            "category": "bags",
+            "desc": "Stylish and spacious shoulder bag for women",
+            "img": "womens_shoulder_bag-min.jpg",
+            "price": 59.99
+        },
+        {
+            "id": 58,
+            "title": "Men's Backpack",
+            "category": "bags",
+            "desc": "Versatile and sturdy backpack for men",
+            "img": "mens_backpack-min.jpg",
+            "price": 69.99
+        },
+        {
+            "id": 59,
+            "title": "Kids' School Backpack",
+            "category": "bags",
+            "desc": "Durable and practical school backpack for kids",
+            "img": "kids_school_backpack-min.jpg",
+            "price": 39.99
+        },
+        {
+            "id": 60,
+            "title": "Women's Clutch Purse",
+            "category": "bags",
+            "desc": "Elegant and compact clutch purse for women",
+            "img": "womens_clutch_purse-min.jpg",
+            "price": 39.99
+        },
+        {
+            "id": 61,
+            "title": "Women's Clutch Purse",
+            "category": "bags",
+            "desc": "Elegant and compact clutch purse for women",
+            "img": "womens_clutch_purse-min.jpg",
+            "price": 39.99
+        },
+        {
+            "id": 62,
+            "title": "Kids' School Backpack",
+            "category": "bags",
+            "desc": "Durable and practical school backpack for kids",
+            "img": "kids_school_backpack-min.jpg",
+            "price": 39.99
+        },
+        {
+            "id": 63,
+            "title": "Men's Backpack",
+            "category": "bags",
+            "desc": "Versatile and sturdy backpack for men",
+            "img": "mens_backpack-min.jpg",
+            "price": 69.99
+        },
+        {
+            "id": 64,
+            "title": "Women's Shoulder Bag",
+            "category": "bags",
+            "desc": "Stylish and spacious shoulder bag for women",
+            "img": "womens_shoulder_bag-min.jpg",
+            "price": 59.99
+        },
+        {
+            "id": 65,
+            "title": "Women's Wide-Brim Hat",
+            "category": "hats",
+            "desc": "Stylish and elegant wide-brim hat for women",
+            "img": "wide_brim_hat_women-min.jpg",
+            "price": 29.99
+        },
+        {
+            "id": 66,
+            "title": "Men's Fedora Hat",
+            "category": "hats",
+            "desc": "Classic and timeless fedora hat for men",
+            "img": "fedora_hat_men-min.jpg",
+            "price": 39.99
+        },
+        {
+            "id": 67,
+            "title": "Women's Beanie Hat",
+            "category": "hats",
+            "desc": "Warm and cozy beanie hat for women",
+            "img": "beanie_hat_women-min.jpg",
+            "price": 19.99
+        },
+        {
+            "id": 68,
+            "title": "Men's Baseball Cap",
+            "category": "hats",
+            "desc": "Casual and comfortable baseball cap for men",
+            "img": "baseball_cap_men-min.jpg",
+            "price": 24.99
+        },
+        {
+            "id": 69,
+            "title": "Men's Baseball Cap",
+            "category": "hats",
+            "desc": "Casual and comfortable baseball cap for men",
+            "img": "baseball_cap_men-min.jpg",
+            "price": 24.99
+        },
+        {
+            "id": 70,
+            "title": "Women's Beanie Hat",
+            "category": "hats",
+            "desc": "Warm and cozy beanie hat for women",
+            "img": "beanie_hat_women-min.jpg",
+            "price": 19.99
+        },
+        {
+            "id": 71,
+            "title": "Men's Fedora Hat",
+            "category": "hats",
+            "desc": "Classic and timeless fedora hat for men",
+            "img": "fedora_hat_men-min.jpg",
+            "price": 39.99
+        },
+        {
+            "id": 72,
+            "title": "Women's Wide-Brim Hat",
+            "category": "hats",
+            "desc": "Stylish and elegant wide-brim hat for women",
+            "img": "wide_brim_hat_women-min.jpg",
+            "price": 29.99
+        },
+        {
+            "id": 73,
+            "title": "Women's Wide-Brim Hat",
+            "category": "hats",
+            "desc": "Stylish and elegant wide-brim hat for women",
+            "img": "wide_brim_hat_women-min.jpg",
+            "price": 29.99
+        },
+        {
+            "id": 74,
+            "title": "Men's Fedora Hat",
+            "category": "hats",
+            "desc": "Classic and timeless fedora hat for men",
+            "img": "fedora_hat_men-min.jpg",
+            "price": 39.99
+        },
+        {
+            "id": 75,
+            "title": "Women's Beanie Hat",
+            "category": "hats",
+            "desc": "Warm and cozy beanie hat for women",
+            "img": "beanie_hat_women-min.jpg",
+            "price": 19.99
+        },
+        {
+            "id": 76,
+            "title": "Men's Baseball Cap",
+            "category": "hats",
+            "desc": "Casual and comfortable baseball cap for men",
+            "img": "baseball_cap_men-min.jpg",
+            "price": 24.99
+        },
+        {
+            "id": 77,
+            "title": "Men's Baseball Cap",
+            "category": "hats",
+            "desc": "Casual and comfortable baseball cap for men",
+            "img": "baseball_cap_men-min.jpg",
+            "price": 24.99
+        },
+        {
+            "id": 78,
+            "title": "Women's Beanie Hat",
+            "category": "hats",
+            "desc": "Warm and cozy beanie hat for women",
+            "img": "beanie_hat_women-min.jpg",
+            "price": 19.99
+        },
+        {
+            "id": 79,
+            "title": "Men's Fedora Hat",
+            "category": "hats",
+            "desc": "Classic and timeless fedora hat for men",
+            "img": "fedora_hat_men-min.jpg",
+            "price": 39.99
+        },
+        {
+            "id": 80,
+            "title": "Women's Wide-Brim Hat",
+            "category": "hats",
+            "desc": "Stylish and elegant wide-brim hat for women",
+            "img": "wide_brim_hat_women-min.jpg",
+            "price": 29.99
+        },
+        {
+            "id": 81,
+            "title": "Women's Wide-Brim Hat",
+            "category": "hats",
+            "desc": "Stylish and elegant wide-brim hat for women",
+            "img": "wide_brim_hat_women-min.jpg",
+            "price": 29.99
+        },
+        {
+            "id": 82,
+            "title": "Men's Fedora Hat",
+            "category": "hats",
+            "desc": "Classic and timeless fedora hat for men",
+            "img": "fedora_hat_men-min.jpg",
+            "price": 39.99
+        },
+        {
+            "id": 83,
+            "title": "Women's Beanie Hat",
+            "category": "hats",
+            "desc": "Warm and cozy beanie hat for women",
+            "img": "beanie_hat_women-min.jpg",
+            "price": 19.99
+        },
+        {
+            "id": 84,
+            "title": "Men's Baseball Cap",
+            "category": "hats",
+            "desc": "Casual and comfortable baseball cap for men",
+            "img": "baseball_cap_men-min.jpg",
+            "price": 24.99
+        },
+        {
+            "id": 85,
+            "title": "Men's Baseball Cap",
+            "category": "hats",
+            "desc": "Casual and comfortable baseball cap for men",
+            "img": "baseball_cap_men-min.jpg",
+            "price": 24.99
+        },
+        {
+            "id": 86,
+            "title": "Women's Beanie Hat",
+            "category": "hats",
+            "desc": "Warm and cozy beanie hat for women",
+            "img": "beanie_hat_women-min.jpg",
+            "price": 19.99
+        },
+        {
+            "id": 87,
+            "title": "Men's Fedora Hat",
+            "category": "hats",
+            "desc": "Classic and timeless fedora hat for men",
+            "img": "fedora_hat_men-min.jpg",
+            "price": 39.99
+        },
+        {
+            "id": 88,
+            "title": "Women's Wide-Brim Hat",
+            "category": "hats",
+            "desc": "Stylish and elegant wide-brim hat for women",
+            "img": "wide_brim_hat_women-min.jpg",
+            "price": 29.99
+        },
+        {
+            "id": 89,
+            "title": "Women's Wide-Brim Hat",
+            "category": "hats",
+            "desc": "Stylish and elegant wide-brim hat for women",
+            "img": "wide_brim_hat_women-min.jpg",
+            "price": 29.99
+        },
+        {
+            "id": 90,
+            "title": "Men's Fedora Hat",
+            "category": "hats",
+            "desc": "Classic and timeless fedora hat for men",
+            "img": "fedora_hat_men-min.jpg",
+            "price": 39.99
+        },
+        {
+            "id": 91,
+            "title": "Women's Beanie Hat",
+            "category": "hats",
+            "desc": "Warm and cozy beanie hat for women",
+            "img": "beanie_hat_women-min.jpg",
+            "price": 19.99
+        },
+        {
+            "id": 92,
+            "title": "Men's Baseball Cap",
+            "category": "hats",
+            "desc": "Casual and comfortable baseball cap for men",
+            "img": "baseball_cap_men-min.jpg",
+            "price": 24.99
+        },
+        {
+            "id": 93,
+            "title": "Men's Baseball Cap",
+            "category": "hats",
+            "desc": "Casual and comfortable baseball cap for men",
+            "img": "baseball_cap_men-min.jpg",
+            "price": 24.99
+        },
+        {
+            "id": 94,
+            "title": "Women's Beanie Hat",
+            "category": "hats",
+            "desc": "Warm and cozy beanie hat for women",
+            "img": "beanie_hat_women-min.jpg",
+            "price": 19.99
+        },
+        {
+            "id": 95,
+            "title": "Men's Fedora Hat",
+            "category": "hats",
+            "desc": "Classic and timeless fedora hat for men",
+            "img": "fedora_hat_men-min.jpg",
+            "price": 39.99
+        },
+        {
+            "id": 96,
+            "title": "Women's Wide-Brim Hat",
+            "category": "hats",
+            "desc": "Stylish and elegant wide-brim hat for women",
+            "img": "wide_brim_hat_women-min.jpg",
+            "price": 29.99
+        }
+    ]
+}
