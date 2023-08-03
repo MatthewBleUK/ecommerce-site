@@ -1,8 +1,7 @@
 import React, { useState } from "react";
+import { BrowserRouter, NavLink } from "react-router-dom";
 
 function App(props) {
-    // Sets state for active li item
-    const [activeContentIndex, setActiveContentIndex] = useState(0);
     // Sets state for mobile hamburger menu
     const [isOpen, setIsOpen] = useState(false);
 
@@ -11,11 +10,13 @@ function App(props) {
             {/* Logo */}
             <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-9">
                 <div className="">
-                    <img
-                        src="logo-min.png"
-                        className="w-100 h-10 mr-2"
-                        alt="Logo"
-                    />
+                    <a href="/">
+                        <img
+                            src="logo-min.png"
+                            className="w-100 h-10 mr-2"
+                            alt="Logo"
+                        />
+                    </a>
                 </div>
                 {/* Mobile hamburger icon */}
                 <div className="block lg:hidden">
@@ -51,26 +52,37 @@ function App(props) {
                     }`}
                 >
                     <nav className="text-sm lg:flex-grow">
-                        <ul className="lg:flex">
-                            {props.nav.map((item, index) => (
-                                <li
+                        <BrowserRouter>
+                            <NavLink
+                                reloadDocument
+                                to="/"
+                                className={({ isActive, isPending }) =>
+                                    isPending
+                                        ? "pending"
+                                        : isActive
+                                        ? "border-b border-gray-700 pb-1.5 mx-2.5"
+                                        : "hover:border-gray-700 border-b pb-1.5 border-transparent mx-2.5"
+                                }
+                            >
+                                Home
+                            </NavLink>
+                            {props.nav.map((item) => (
+                                <NavLink
+                                    reloadDocument
                                     key={item}
-                                    className="mt-4 lg:mt-0 lg:px-4"
-                                    onClick={() => setActiveContentIndex(index)}
+                                    to={item.toLowerCase()}
+                                    className={({ isActive, isPending }) =>
+                                        isPending
+                                            ? "pending"
+                                            : isActive
+                                            ? "border-b border-gray-700 pb-1.5 mx-2.5"
+                                            : "hover:border-gray-700 border-b pb-1.5 border-transparent mx-2.5"
+                                    }
                                 >
-                                    <a
-                                        href={item.toLowerCase()}
-                                        className={`hover:border-gray-700 border-b pb-1.5 ${
-                                            activeContentIndex === index
-                                                ? "border-gray-700"
-                                                : "border-transparent"
-                                        }`}
-                                    >
-                                        {item}
-                                    </a>
-                                </li>
+                                    {item}
+                                </NavLink>
                             ))}
-                        </ul>
+                        </BrowserRouter>
                     </nav>
                 </div>
 
