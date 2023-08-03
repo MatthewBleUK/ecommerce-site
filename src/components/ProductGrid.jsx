@@ -3,7 +3,7 @@ import productsData from "../products.json";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import CategoryDescription from "./CategoryDescription";
-import ProductFiltering from "./ProductSorting";
+import ProductSorting from "./ProductSorting";
 
 const ITEMS_PER_PAGE = 16;
 const INITIAL_PAGE_COUNT = 1;
@@ -39,7 +39,7 @@ function ProductGrid({ category, title, desc }) {
     return (
         <>
             <CategoryDescription title={title} desc={desc} />
-            <ProductFiltering
+            <ProductSorting
                 jsonData={jsonData}
                 setSortedData={setJsonData}
                 setIsSorted={setIsSorted}
