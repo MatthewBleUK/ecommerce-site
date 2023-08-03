@@ -3,6 +3,7 @@ import productsData from "../products.json";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import CategoryDescription from "./CategoryDescription";
+import ProductFiltering from "./ProductSorting";
 
 const ITEMS_PER_PAGE = 16;
 const INITIAL_PAGE_COUNT = 1;
@@ -10,14 +11,19 @@ const INITIAL_PAGE_COUNT = 1;
 function ProductGrid({ category, title, desc }) {
     const [jsonData, setJsonData] = useState([]);
     const [pageCount, setPageCount] = useState(INITIAL_PAGE_COUNT);
+    const [isSorted, setIsSorted] = useState(false);
 
+    /* Sets the jsonData from productsData json import */
     useEffect(() => {
-        /* Filters the productsData array to only return the correct category */
-        const filteredProducts = productsData.products.filter(
-            (product) => product.category === category
-        );
+        /* Checks if ProductSorting has sorted the jsonData */
+        if (isSorted == false) {
+            /* Filters the productsData array to only return the products with the correct category */
+            const products = productsData.products.filter(
+                (product) => product.category === category
+            );
 
-        setJsonData(filteredProducts);
+            setJsonData(products);
+        }
     }, [pageCount]);
 
     const handleLoadMore = () => {
@@ -33,6 +39,12 @@ function ProductGrid({ category, title, desc }) {
     return (
         <>
             <CategoryDescription title={title} desc={desc} />
+            <ProductFiltering
+                jsonData={jsonData}
+                setSortedData={setJsonData}
+                setIsSorted={setIsSorted}
+            />
+
             <div
                 id="product-grid"
                 className="max-w-screen-2xl justify-between mx-auto p-9"
