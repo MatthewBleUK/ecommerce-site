@@ -1,8 +1,9 @@
-import AnnouncementBar from "./components/AnnouncementBar";
-import Header from "./components/Header";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
+import AnnouncementBar from "./components/AnnouncementBar";
+import Header from "./components/Header";
 import ProductGrid from "./components/ProductGrid";
+import Footer from "./components/Footer";
 
 function App() {
     const navigationItems = ["Shoes", "Bags", "Hats"];
@@ -33,6 +34,8 @@ function App() {
                     />
                 </Routes>
             </Router>
+
+            <Footer />
         </>
     );
 }
