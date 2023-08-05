@@ -1,30 +1,38 @@
 import React, { useState, useEffect } from "react";
-import productsData from "../products.json";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+
+import productList from "../products.json";
+
 import CategoryDescription from "./CategoryDescription";
 import ProductSorting from "./ProductSorting";
+import ProductFiltering from "./ProductFiltering";
 
 const ITEMS_PER_PAGE = 16;
 const INITIAL_PAGE_COUNT = 1;
 
 function ProductGrid({ category, title, desc }) {
-    const [jsonData, setJsonData] = useState([]);
-    const [pageCount, setPageCount] = useState(INITIAL_PAGE_COUNT);
-    const [isSorted, setIsSorted] = useState(false);
+    const [products, setProducts] = useState([]); // Holds the filtered / sorted products in the correct order
+    const [pageCount, setPageCount] = useState(INITIAL_PAGE_COUNT); // Sets the page count state
+    const [sortedProducts, setSortedProducts] = useState([]); // Holds the sorted products
+    const [filteredProducts, setFilteredProducts] = useState([]); // Holds the filtered products
 
-    /* Sets the jsonData from productsData json import */
     useEffect(() => {
-        /* Checks if ProductSorting has sorted the jsonData */
-        if (isSorted == false) {
-            /* Filters the productsData array to only return the products with the correct category */
-            const products = productsData.products.filter(
+        orderProducts();
+    }, [sortedProducts, filteredProducts]);
+
+    const getCategoryProducts = () => {
+        // Only returns the products with the correct category
+        if (category) {
+            return productList.products.filter(
                 (product) => product.category === category
             );
-
-            setJsonData(products);
         }
-    }, [pageCount]);
+        // Callback was used to fix state update problem with 'return productList.products'
+        return productList.products.filter(
+            (product) => typeof product.title === "string"
+        );
+    };
 
     const handleLoadMore = () => {
         setPageCount((prevPageCount) => prevPageCount + 1);
@@ -33,42 +41,66 @@ function ProductGrid({ category, title, desc }) {
     const getPaginatedData = () => {
         const startIndex = (pageCount - 1) * ITEMS_PER_PAGE;
         const endIndex = startIndex + ITEMS_PER_PAGE;
-        return jsonData.slice(0, endIndex);
+
+        return products.slice(0, endIndex);
+    };
+
+    // Makes sure setProducts consists of the correct filtered products and sorted order
+    const orderProducts = () => {
+        // Sets the products state if it has not been sorted
+        if (sortedProducts.length == 0) {
+            return setProducts(filteredProducts); // filteredProducts will return all the products when no filter is applied
+        }
+
+        // Set products state, only if it has been sorted
+        setProducts(
+            sortedProducts.filter((product) =>
+                filteredProducts.includes(product)
+            )
+        );
     };
 
     return (
         <>
             <CategoryDescription title={title} desc={desc} />
             <ProductSorting
-                jsonData={jsonData}
-                setSortedData={setJsonData}
-                setIsSorted={setIsSorted}
+                products={getCategoryProducts()}
+                setSortedProducts={setSortedProducts}
             />
 
-            <div
-                id="product-grid"
-                className="max-w-screen-2xl justify-between mx-auto p-9"
-            >
+            <div className="max-w-screen-2xl mx-auto p-9 pt-0 flex">
+                <ProductFiltering
+                    products={getCategoryProducts()}
+                    setFilteredProducts={setFilteredProducts}
+                />
+
                 <ul
                     id="product-list"
-                    className="grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3"
+                    className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 col-span-4 mt-2"
                 >
+                    {/* Renders products */}
                     {getPaginatedData().map((product) => {
                         return (
                             <li
                                 key={product.id}
-                                className="flex flex-col product-item p-2.5 m-5"
+                                className="flex flex-col product-item"
                             >
-                                <LazyLoadImage
-                                    effect="blur"
-                                    src={product.img}
-                                    alt={product.desc}
-                                    width={216}
-                                    height={216}
-                                />
-                                <span className="text-base">
-                                    {product.title}
-                                </span>
+                                <a
+                                    href=""
+                                    className="hover:underline flex flex-col"
+                                >
+                                    <LazyLoadImage
+                                        effect="blur"
+                                        src={product.img}
+                                        alt={product.desc}
+                                        width={216}
+                                        height={216}
+                                    />
+
+                                    <span className="text-base">
+                                        {product.title}
+                                    </span>
+                                </a>
                                 <p className="w-3/4 text-sm my-1">
                                     {product.desc}
                                 </p>
@@ -79,12 +111,15 @@ function ProductGrid({ category, title, desc }) {
                         );
                     })}
                 </ul>
+            </div>
 
-                {jsonData.length > pageCount * ITEMS_PER_PAGE && (
-                    <div className="d-grid mt-20 mb-7 text-center">
+            <div className="flex max-w-screen-2xl justify-center mx-auto">
+                <div className="flex flex-col w-72"></div>
+                {products.length > pageCount * ITEMS_PER_PAGE && (
+                    <div className="d-grid mt-10 mb-16 text-center">
                         <button
                             onClick={handleLoadMore}
-                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+                            className="washed-gray-bg hover:bg-gray-700 text-white font-bold py-2 px-4"
                         >
                             Load More
                         </button>

@@ -50,8 +50,7 @@ function App() {
                         path="/"
                         element={
                             <ProductGrid
-                                category="shoes"
-                                title="Shoes"
+                                title="Products"
                                 desc="Using mostly recycled fibers, we create sustainable shoes that combine comfort with timeless style. Step into our shoes and experience the difference of artisanal craftsmanship and eco-conscious design."
                             />
                         }

@@ -6,7 +6,7 @@ function App(props) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="bg-white border-b border-zinc-300 sticky top-0 z-10">
+        <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
             {/* Logo */}
             <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-9">
                 <div className="">

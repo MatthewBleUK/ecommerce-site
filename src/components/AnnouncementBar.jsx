@@ -1,12 +1,7 @@
-function AnnouncementBar(props) {
+function AnnouncementBar({ title }) {
     return (
-        <div
-            id="announcementBar"
-            className="h-12 flex items-center text-center"
-        >
-            <span className="grow text-white text-sm font-light">
-                {props.title}
-            </span>
+        <div className="h-12 flex items-center text-center washed-gray-bg">
+            <span className="grow text-white text-sm font-light">{title}</span>
         </div>
     );
 }
