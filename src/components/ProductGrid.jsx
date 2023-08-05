@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import productList from "../products.json";
 
 import CategoryDescription from "./CategoryDescription";
@@ -60,6 +63,12 @@ function ProductGrid({ category, title, desc }) {
         );
     };
 
+    const handleAddToCart = (product) => {
+        toast.success(`${product} has been added to cart`, {
+            position: toast.POSITION.BOTTOM_RIGHT,
+        });
+    };
+
     return (
         <>
             <CategoryDescription title={title} desc={desc} />
@@ -107,6 +116,15 @@ function ProductGrid({ category, title, desc }) {
                                 <span className="text-lg">
                                     ${product.price}
                                 </span>
+
+                                <button
+                                    className="text-sm p-1 my-5 w-32 transition ease-in duration-200 bg-white hover:bg-gray-800 text-black hover:text-white text-black border border-gray-900"
+                                    onClick={() =>
+                                        handleAddToCart(product.title)
+                                    }
+                                >
+                                    Add to Cart
+                                </button>
                             </li>
                         );
                     })}
@@ -126,6 +144,8 @@ function ProductGrid({ category, title, desc }) {
                     </div>
                 )}
             </div>
+
+            <ToastContainer />
         </>
     );
 }
