@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
-
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-
 import productList from "../products.json";
 
 import CategoryDescription from "./CategoryDescription";
 import ProductSorting from "./ProductSorting";
 import ProductFiltering from "./ProductFiltering";
+import AddToCartButton from "./addToCartButton";
+
+import { ToastContainer } from "react-toastify";
+
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const ITEMS_PER_PAGE = 16;
 const INITIAL_PAGE_COUNT = 1;
@@ -63,12 +63,6 @@ function ProductGrid({ category, title, desc }) {
         );
     };
 
-    const handleAddToCart = (product) => {
-        toast.success(`${product} has been added to cart`, {
-            position: toast.POSITION.BOTTOM_RIGHT,
-        });
-    };
-
     return (
         <>
             <CategoryDescription title={title} desc={desc} />
@@ -117,14 +111,7 @@ function ProductGrid({ category, title, desc }) {
                                     ${product.price}
                                 </span>
 
-                                <button
-                                    className="text-sm p-1 my-5 w-32 transition ease-in duration-200 bg-white hover:bg-gray-800 text-black hover:text-white text-black border border-gray-900"
-                                    onClick={() =>
-                                        handleAddToCart(product.title)
-                                    }
-                                >
-                                    Add to Cart
-                                </button>
+                                <AddToCartButton title={product.title} />
                             </li>
                         );
                     })}
