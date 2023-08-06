@@ -17,6 +17,7 @@
             "desc": "Elegant and fashionable high heels for women",
             "img": "womens_high_heels-min.jpg",
             "price": 99.99,
+            "discounted_price": 79.99,
             "rating": 3,
             "color": "Orange"
         },
@@ -37,6 +38,7 @@
             "desc": "Durable sports shoes for active kids",
             "img": "kids_sports_shoes-min.jpg",
             "price": 49.99,
+            "discounted_price": 39.99,
             "rating": 4,
             "color": "Gray"
         },
@@ -47,6 +49,7 @@
             "desc": "Durable sports shoes for active kids",
             "img": "kids_sports_shoes-min.jpg",
             "price": 49.99,
+            "discounted_price": 39.99,
             "rating": 4,
             "color": "Gray"
         },
@@ -67,6 +70,7 @@
             "desc": "Elegant and fashionable high heels for women",
             "img": "womens_high_heels-min.jpg",
             "price": 99.99,
+            "discounted_price": 79.99,
             "rating": 3,
             "color": "Orange"
         },
@@ -97,6 +101,7 @@
             "desc": "Elegant and fashionable high heels for women",
             "img": "womens_high_heels-min.jpg",
             "price": 99.99,
+            "discounted_price": 79.99,
             "rating": 3,
             "color": "Orange"
         },
@@ -117,6 +122,7 @@
             "desc": "Durable sports shoes for active kids",
             "img": "kids_sports_shoes-min.jpg",
             "price": 49.99,
+            "discounted_price": 39.99,
             "rating": 4,
             "color": "Gray"
         },
@@ -127,6 +133,7 @@
             "desc": "Durable sports shoes for active kids",
             "img": "kids_sports_shoes-min.jpg",
             "price": 49.99,
+            "discounted_price": 39.99,
             "rating": 4,
             "color": "Gray"
         },
@@ -147,6 +154,7 @@
             "desc": "Elegant and fashionable high heels for women",
             "img": "womens_high_heels-min.jpg",
             "price": 99.99,
+            "discounted_price": 79.99,
             "rating": 3,
             "color": "Orange"
         },
@@ -177,6 +185,7 @@
             "desc": "Elegant and fashionable high heels for women",
             "img": "womens_high_heels-min.jpg",
             "price": 99.99,
+            "discounted_price": 79.99,
             "rating": 3,
             "color": "Orange"
         },
@@ -197,6 +206,7 @@
             "desc": "Durable sports shoes for active kids",
             "img": "kids_sports_shoes-min.jpg",
             "price": 49.99,
+            "discounted_price": 39.99,
             "rating": 4,
             "color": "Gray"
         },
@@ -207,6 +217,7 @@
             "desc": "Durable sports shoes for active kids",
             "img": "kids_sports_shoes-min.jpg",
             "price": 49.99,
+            "discounted_price": 39.99,
             "rating": 4,
             "color": "Gray"
         },
@@ -227,6 +238,7 @@
             "desc": "Elegant and fashionable high heels for women",
             "img": "womens_high_heels-min.jpg",
             "price": 99.99,
+            "discounted_price": 79.99,
             "rating": 3,
             "color": "Orange"
         },
@@ -257,6 +269,7 @@
             "desc": "Elegant and fashionable high heels for women",
             "img": "womens_high_heels-min.jpg",
             "price": 99.99,
+            "discounted_price": 79.99,
             "rating": 3,
             "color": "Orange"
         },
@@ -277,6 +290,7 @@
             "desc": "Durable sports shoes for active kids",
             "img": "kids_sports_shoes-min.jpg",
             "price": 49.99,
+            "discounted_price": 39.99,
             "rating": 4,
             "color": "Gray"
         },
@@ -287,6 +301,7 @@
             "desc": "Durable sports shoes for active kids",
             "img": "kids_sports_shoes-min.jpg",
             "price": 49.99,
+            "discounted_price": 39.99,
             "rating": 4,
             "color": "Gray"
         },
@@ -307,6 +322,7 @@
             "desc": "Elegant and fashionable high heels for women",
             "img": "womens_high_heels-min.jpg",
             "price": 99.99,
+            "discounted_price": 79.99,
             "rating": 3,
             "color": "Orange"
         },
@@ -327,6 +343,7 @@
             "desc": "Stylish and spacious shoulder bag for women",
             "img": "womens_shoulder_bag-min.jpg",
             "price": 59.99,
+            "discounted_price": 39.99,
             "rating": 2,
             "color": "White"
         },
@@ -347,6 +364,7 @@
             "desc": "Durable and practical school backpack for kids",
             "img": "kids_school_backpack-min.jpg",
             "price": 39.99,
+            "discounted_price": 24.99,
             "rating": 3,
             "color": "Blue"
         },
@@ -377,6 +395,7 @@
             "desc": "Durable and practical school backpack for kids",
             "img": "kids_school_backpack-min.jpg",
             "price": 39.99,
+            "discounted_price": 24.99,
             "rating": 3,
             "color": "Blue"
         },
@@ -397,6 +416,7 @@
             "desc": "Stylish and spacious shoulder bag for women",
             "img": "womens_shoulder_bag-min.jpg",
             "price": 59.99,
+            "discounted_price": 39.99,
             "rating": 2,
             "color": "White"
         },
@@ -407,6 +427,7 @@
             "desc": "Stylish and spacious shoulder bag for women",
             "img": "womens_shoulder_bag-min.jpg",
             "price": 59.99,
+            "discounted_price": 39.99,
             "rating": 2,
             "color": "White"
         },
@@ -427,6 +448,7 @@
             "desc": "Durable and practical school backpack for kids",
             "img": "kids_school_backpack-min.jpg",
             "price": 39.99,
+            "discounted_price": 24.99,
             "rating": 3,
             "color": "Blue"
         },
@@ -457,6 +479,7 @@
             "desc": "Durable and practical school backpack for kids",
             "img": "kids_school_backpack-min.jpg",
             "price": 39.99,
+            "discounted_price": 24.99,
             "rating": 3,
             "color": "Blue"
         },
@@ -477,6 +500,7 @@
             "desc": "Stylish and spacious shoulder bag for women",
             "img": "womens_shoulder_bag-min.jpg",
             "price": 59.99,
+            "discounted_price": 39.99,
             "rating": 2,
             "color": "White"
         },
@@ -487,6 +511,7 @@
             "desc": "Stylish and spacious shoulder bag for women",
             "img": "womens_shoulder_bag-min.jpg",
             "price": 59.99,
+            "discounted_price": 39.99,
             "rating": 2,
             "color": "White"
         },
@@ -507,6 +532,7 @@
             "desc": "Durable and practical school backpack for kids",
             "img": "kids_school_backpack-min.jpg",
             "price": 39.99,
+            "discounted_price": 24.99,
             "rating": 3,
             "color": "Blue"
         },
@@ -537,6 +563,7 @@
             "desc": "Durable and practical school backpack for kids",
             "img": "kids_school_backpack-min.jpg",
             "price": 39.99,
+            "discounted_price": 24.99,
             "rating": 3,
             "color": "Blue"
         },
@@ -557,6 +584,7 @@
             "desc": "Stylish and spacious shoulder bag for women",
             "img": "womens_shoulder_bag-min.jpg",
             "price": 59.99,
+            "discounted_price": 39.99,
             "rating": 2,
             "color": "White"
         },
@@ -567,6 +595,7 @@
             "desc": "Stylish and spacious shoulder bag for women",
             "img": "womens_shoulder_bag-min.jpg",
             "price": 59.99,
+            "discounted_price": 39.99,
             "rating": 2,
             "color": "White"
         },
@@ -587,6 +616,7 @@
             "desc": "Durable and practical school backpack for kids",
             "img": "kids_school_backpack-min.jpg",
             "price": 39.99,
+            "discounted_price": 24.99,
             "rating": 3,
             "color": "Blue"
         },
@@ -617,6 +647,7 @@
             "desc": "Durable and practical school backpack for kids",
             "img": "kids_school_backpack-min.jpg",
             "price": 39.99,
+            "discounted_price": 24.99,
             "rating": 3,
             "color": "Blue"
         },
@@ -637,6 +668,7 @@
             "desc": "Stylish and spacious shoulder bag for women",
             "img": "womens_shoulder_bag-min.jpg",
             "price": 59.99,
+            "discounted_price": 39.99,
             "rating": 2,
             "color": "White"
         },
@@ -647,6 +679,7 @@
             "desc": "Stylish and elegant wide-brim hat for women",
             "img": "wide_brim_hat_women-min.jpg",
             "price": 29.99,
+            "discounted_price": 24.99,
             "rating": 1,
             "color": "Beige"
         },
@@ -657,6 +690,7 @@
             "desc": "Classic and timeless fedora hat for men",
             "img": "fedora_hat_men-min.jpg",
             "price": 39.99,
+            "discounted_price": 34.99,
             "rating": 3,
             "color": "Brown"
         },
@@ -707,6 +741,7 @@
             "desc": "Classic and timeless fedora hat for men",
             "img": "fedora_hat_men-min.jpg",
             "price": 39.99,
+            "discounted_price": 34.99,
             "rating": 3,
             "color": "Brown"
         },
@@ -717,6 +752,7 @@
             "desc": "Stylish and elegant wide-brim hat for women",
             "img": "wide_brim_hat_women-min.jpg",
             "price": 29.99,
+            "discounted_price": 24.99,
             "rating": 1,
             "color": "Beige"
         },
@@ -727,6 +763,7 @@
             "desc": "Stylish and elegant wide-brim hat for women",
             "img": "wide_brim_hat_women-min.jpg",
             "price": 29.99,
+            "discounted_price": 24.99,
             "rating": 1,
             "color": "Beige"
         },
@@ -737,6 +774,7 @@
             "desc": "Classic and timeless fedora hat for men",
             "img": "fedora_hat_men-min.jpg",
             "price": 39.99,
+            "discounted_price": 34.99,
             "rating": 3,
             "color": "Brown"
         },
@@ -787,6 +825,7 @@
             "desc": "Classic and timeless fedora hat for men",
             "img": "fedora_hat_men-min.jpg",
             "price": 39.99,
+            "discounted_price": 34.99,
             "rating": 3,
             "color": "Brown"
         },
@@ -797,6 +836,7 @@
             "desc": "Stylish and elegant wide-brim hat for women",
             "img": "wide_brim_hat_women-min.jpg",
             "price": 29.99,
+            "discounted_price": 24.99,
             "rating": 1,
             "color": "Beige"
         },
@@ -807,6 +847,7 @@
             "desc": "Stylish and elegant wide-brim hat for women",
             "img": "wide_brim_hat_women-min.jpg",
             "price": 29.99,
+            "discounted_price": 24.99,
             "rating": 1,
             "color": "Beige"
         },
@@ -817,6 +858,7 @@
             "desc": "Classic and timeless fedora hat for men",
             "img": "fedora_hat_men-min.jpg",
             "price": 39.99,
+            "discounted_price": 34.99,
             "rating": 3,
             "color": "Brown"
         },
@@ -867,6 +909,7 @@
             "desc": "Classic and timeless fedora hat for men",
             "img": "fedora_hat_men-min.jpg",
             "price": 39.99,
+            "discounted_price": 34.99,
             "rating": 3,
             "color": "Brown"
         },
@@ -877,6 +920,7 @@
             "desc": "Stylish and elegant wide-brim hat for women",
             "img": "wide_brim_hat_women-min.jpg",
             "price": 29.99,
+            "discounted_price": 24.99,
             "rating": 1,
             "color": "Beige"
         },
@@ -887,6 +931,7 @@
             "desc": "Stylish and elegant wide-brim hat for women",
             "img": "wide_brim_hat_women-min.jpg",
             "price": 29.99,
+            "discounted_price": 24.99,
             "rating": 1,
             "color": "Beige"
         },
@@ -897,6 +942,7 @@
             "desc": "Classic and timeless fedora hat for men",
             "img": "fedora_hat_men-min.jpg",
             "price": 39.99,
+            "discounted_price": 34.99,
             "rating": 3,
             "color": "Brown"
         },
@@ -947,6 +993,7 @@
             "desc": "Classic and timeless fedora hat for men",
             "img": "fedora_hat_men-min.jpg",
             "price": 39.99,
+            "discounted_price": 34.99,
             "rating": 3,
             "color": "Brown"
         },
@@ -957,6 +1004,7 @@
             "desc": "Stylish and elegant wide-brim hat for women",
             "img": "wide_brim_hat_women-min.jpg",
             "price": 29.99,
+            "discounted_price": 24.99,
             "rating": 1,
             "color": "Beige"
         }

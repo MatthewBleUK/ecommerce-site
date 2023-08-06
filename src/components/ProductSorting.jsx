@@ -26,10 +26,35 @@ const ProductSorting = ({ products, setSortedProducts }) => {
                 products.sort((a, b) => b.title.localeCompare(a.title));
                 break;
             case "PriceAsc":
-                products.sort((a, b) => a.price - b.price);
+                // Sorts price low to high, uses discounted_price if available
+                products.sort((a, b) => {
+                    const aPrice =
+                        a.discounted_price !== undefined
+                            ? a.discounted_price
+                            : a.price;
+                    const bPrice =
+                        b.discounted_price !== undefined
+                            ? b.discounted_price
+                            : b.price;
+
+                    return aPrice - bPrice;
+                });
                 break;
             case "PriceDesc":
-                products.sort((a, b) => b.price - a.price);
+                // Sorts price high to low, uses discounted_price if available
+                products.sort((a, b) => {
+                    const aPrice =
+                        a.discounted_price !== undefined
+                            ? a.discounted_price
+                            : a.price;
+                    const bPrice =
+                        b.discounted_price !== undefined
+                            ? b.discounted_price
+                            : b.price;
+
+                    return bPrice - aPrice;
+                });
+
                 break;
             default:
                 break;

@@ -29,7 +29,12 @@ const ProductFiltering = ({ products, setFilteredProducts }) => {
     };
 
     const getPrices = () => {
-        return products.map((product) => product.price);
+        // Returns discounted_price if available
+        return products.map((product) => {
+            return product.discounted_price !== undefined
+                ? product.discounted_price
+                : product.price;
+        });
     };
 
     const getMaxProductPrice = () => {

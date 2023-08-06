@@ -112,9 +112,21 @@ function ProductGrid({ category, title, desc }) {
                                     <p className="w-3/4 text-sm my-1">
                                         {product.desc}
                                     </p>
-                                    <span className="text-lg">
-                                        ${product.price}
-                                    </span>
+
+                                    {product.discounted_price ? (
+                                        <div className="float-left">
+                                            <span className="text-base line-through pr-2">
+                                                ${product.price}
+                                            </span>
+                                            <span className="text-emerald-600 text-lg">
+                                                ${product.discounted_price}
+                                            </span>
+                                        </div>
+                                    ) : (
+                                        <span className="text-lg">
+                                            ${product.price}
+                                        </span>
+                                    )}
 
                                     <AddToCartButton title={product.title} />
                                 </li>
