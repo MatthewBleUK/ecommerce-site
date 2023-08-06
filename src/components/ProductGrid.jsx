@@ -11,6 +11,7 @@ import { ToastContainer } from "react-toastify";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import ProductCounter from "./ProductCounter";
+import StarRatings from "./StarRatings";
 
 const ITEMS_PER_PAGE = 16;
 const INITIAL_PAGE_COUNT = 1;
@@ -108,6 +109,9 @@ function ProductGrid({ category, title, desc }) {
                                             {product.title}
                                         </span>
                                     </a>
+
+                                    <StarRatings rating={product.rating} />
+
                                     <p className="w-3/4 text-sm my-1">
                                         {product.desc}
                                     </p>

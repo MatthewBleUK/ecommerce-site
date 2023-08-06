@@ -7,6 +7,7 @@
             "desc": "Comfortable and stylish women's sneakers",
             "img": "womens_sneakers-min.jpg",
             "price": 79.99,
+            "rating": 4,
             "color": "White"
         },
         {
@@ -16,6 +17,7 @@
             "desc": "Elegant and fashionable high heels for women",
             "img": "womens_high_heels-min.jpg",
             "price": 99.99,
+            "rating": 3,
             "color": "Orange"
         },
         {
@@ -25,6 +27,7 @@
             "desc": "High-performance running shoes for men",
             "img": "mens_running_shoes-min.jpeg",
             "price": 89.99,
+            "rating": 5,
             "color": "Blue"
         },
         {
@@ -34,6 +37,7 @@
             "desc": "Durable sports shoes for active kids",
             "img": "kids_sports_shoes-min.jpg",
             "price": 49.99,
+            "rating": 4,
             "color": "Gray"
         },
         {
@@ -43,6 +47,7 @@
             "desc": "Durable sports shoes for active kids",
             "img": "kids_sports_shoes-min.jpg",
             "price": 49.99,
+            "rating": 4,
             "color": "Gray"
         },
         {
@@ -52,6 +57,7 @@
             "desc": "High-performance running shoes for men",
             "img": "mens_running_shoes-min.jpeg",
             "price": 89.99,
+            "rating": 5,
             "color": "Blue"
         },
         {
@@ -61,6 +67,7 @@
             "desc": "Elegant and fashionable high heels for women",
             "img": "womens_high_heels-min.jpg",
             "price": 99.99,
+            "rating": 3,
             "color": "Orange"
         },
         {
@@ -70,6 +77,7 @@
             "desc": "Comfortable and stylish women's sneakers",
             "img": "womens_sneakers-min.jpg",
             "price": 79.99,
+            "rating": 4,
             "color": "White"
         },
         {
@@ -79,6 +87,7 @@
             "desc": "Comfortable and stylish women's sneakers",
             "img": "womens_sneakers-min.jpg",
             "price": 79.99,
+            "rating": 4,
             "color": "White"
         },
         {
@@ -88,6 +97,7 @@
             "desc": "Elegant and fashionable high heels for women",
             "img": "womens_high_heels-min.jpg",
             "price": 99.99,
+            "rating": 3,
             "color": "Orange"
         },
         {
@@ -97,6 +107,7 @@
             "desc": "High-performance running shoes for men",
             "img": "mens_running_shoes-min.jpeg",
             "price": 89.99,
+            "rating": 5,
             "color": "Blue"
         },
         {
@@ -106,6 +117,7 @@
             "desc": "Durable sports shoes for active kids",
             "img": "kids_sports_shoes-min.jpg",
             "price": 49.99,
+            "rating": 4,
             "color": "Gray"
         },
         {
@@ -115,6 +127,7 @@
             "desc": "Durable sports shoes for active kids",
             "img": "kids_sports_shoes-min.jpg",
             "price": 49.99,
+            "rating": 4,
             "color": "Gray"
         },
         {
@@ -124,6 +137,7 @@
             "desc": "High-performance running shoes for men",
             "img": "mens_running_shoes-min.jpeg",
             "price": 89.99,
+            "rating": 5,
             "color": "Blue"
         },
         {
@@ -133,6 +147,7 @@
             "desc": "Elegant and fashionable high heels for women",
             "img": "womens_high_heels-min.jpg",
             "price": 99.99,
+            "rating": 3,
             "color": "Orange"
         },
         {
@@ -142,6 +157,7 @@
             "desc": "Comfortable and stylish women's sneakers",
             "img": "womens_sneakers-min.jpg",
             "price": 79.99,
+            "rating": 4,
             "color": "White"
         },
         {
@@ -151,6 +167,7 @@
             "desc": "Comfortable and stylish women's sneakers",
             "img": "womens_sneakers-min.jpg",
             "price": 79.99,
+            "rating": 4,
             "color": "White"
         },
         {
@@ -160,6 +177,7 @@
             "desc": "Elegant and fashionable high heels for women",
             "img": "womens_high_heels-min.jpg",
             "price": 99.99,
+            "rating": 3,
             "color": "Orange"
         },
         {
@@ -169,6 +187,7 @@
             "desc": "High-performance running shoes for men",
             "img": "mens_running_shoes-min.jpeg",
             "price": 89.99,
+            "rating": 5,
             "color": "Blue"
         },
         {
@@ -178,6 +197,7 @@
             "desc": "Durable sports shoes for active kids",
             "img": "kids_sports_shoes-min.jpg",
             "price": 49.99,
+            "rating": 4,
             "color": "Gray"
         },
         {
@@ -187,6 +207,7 @@
             "desc": "Durable sports shoes for active kids",
             "img": "kids_sports_shoes-min.jpg",
             "price": 49.99,
+            "rating": 4,
             "color": "Gray"
         },
         {
@@ -196,6 +217,7 @@
             "desc": "High-performance running shoes for men",
             "img": "mens_running_shoes-min.jpeg",
             "price": 89.99,
+            "rating": 5,
             "color": "Blue"
         },
         {
@@ -205,6 +227,7 @@
             "desc": "Elegant and fashionable high heels for women",
             "img": "womens_high_heels-min.jpg",
             "price": 99.99,
+            "rating": 3,
             "color": "Orange"
         },
         {
@@ -214,6 +237,7 @@
             "desc": "Comfortable and stylish women's sneakers",
             "img": "womens_sneakers-min.jpg",
             "price": 79.99,
+            "rating": 4,
             "color": "White"
         },
         {
@@ -223,6 +247,7 @@
             "desc": "Comfortable and stylish women's sneakers",
             "img": "womens_sneakers-min.jpg",
             "price": 79.99,
+            "rating": 4,
             "color": "White"
         },
         {
@@ -232,6 +257,7 @@
             "desc": "Elegant and fashionable high heels for women",
             "img": "womens_high_heels-min.jpg",
             "price": 99.99,
+            "rating": 3,
             "color": "Orange"
         },
         {
@@ -241,6 +267,7 @@
             "desc": "High-performance running shoes for men",
             "img": "mens_running_shoes-min.jpeg",
             "price": 89.99,
+            "rating": 5,
             "color": "Blue"
         },
         {
@@ -250,6 +277,7 @@
             "desc": "Durable sports shoes for active kids",
             "img": "kids_sports_shoes-min.jpg",
             "price": 49.99,
+            "rating": 4,
             "color": "Gray"
         },
         {
@@ -259,6 +287,7 @@
             "desc": "Durable sports shoes for active kids",
             "img": "kids_sports_shoes-min.jpg",
             "price": 49.99,
+            "rating": 4,
             "color": "Gray"
         },
         {
@@ -268,6 +297,7 @@
             "desc": "High-performance running shoes for men",
             "img": "mens_running_shoes-min.jpeg",
             "price": 89.99,
+            "rating": 5,
             "color": "Blue"
         },
         {
@@ -277,6 +307,7 @@
             "desc": "Elegant and fashionable high heels for women",
             "img": "womens_high_heels-min.jpg",
             "price": 99.99,
+            "rating": 3,
             "color": "Orange"
         },
         {
@@ -286,6 +317,7 @@
             "desc": "Comfortable and stylish women's sneakers",
             "img": "womens_sneakers-min.jpg",
             "price": 79.99,
+            "rating": 4,
             "color": "White"
         },
         {
@@ -295,6 +327,7 @@
             "desc": "Stylish and spacious shoulder bag for women",
             "img": "womens_shoulder_bag-min.jpg",
             "price": 59.99,
+            "rating": 2,
             "color": "White"
         },
         {
@@ -304,6 +337,7 @@
             "desc": "Versatile and sturdy backpack for men",
             "img": "mens_backpack-min.jpg",
             "price": 69.99,
+            "rating": 4,
             "color": "Gray"
         },
         {
@@ -313,6 +347,7 @@
             "desc": "Durable and practical school backpack for kids",
             "img": "kids_school_backpack-min.jpg",
             "price": 39.99,
+            "rating": 3,
             "color": "Blue"
         },
         {
@@ -322,6 +357,7 @@
             "desc": "Elegant and compact clutch purse for women",
             "img": "womens_clutch_purse-min.jpg",
             "price": 39.99,
+            "rating": 5,
             "color": "Black"
         },
         {
@@ -331,6 +367,7 @@
             "desc": "Elegant and compact clutch purse for women",
             "img": "womens_clutch_purse-min.jpg",
             "price": 39.99,
+            "rating": 5,
             "color": "Black"
         },
         {
@@ -340,6 +377,7 @@
             "desc": "Durable and practical school backpack for kids",
             "img": "kids_school_backpack-min.jpg",
             "price": 39.99,
+            "rating": 3,
             "color": "Blue"
         },
         {
@@ -349,6 +387,7 @@
             "desc": "Versatile and sturdy backpack for men",
             "img": "mens_backpack-min.jpg",
             "price": 69.99,
+            "rating": 4,
             "color": "Gray"
         },
         {
@@ -358,6 +397,7 @@
             "desc": "Stylish and spacious shoulder bag for women",
             "img": "womens_shoulder_bag-min.jpg",
             "price": 59.99,
+            "rating": 2,
             "color": "White"
         },
         {
@@ -367,6 +407,7 @@
             "desc": "Stylish and spacious shoulder bag for women",
             "img": "womens_shoulder_bag-min.jpg",
             "price": 59.99,
+            "rating": 2,
             "color": "White"
         },
         {
@@ -376,6 +417,7 @@
             "desc": "Versatile and sturdy backpack for men",
             "img": "mens_backpack-min.jpg",
             "price": 69.99,
+            "rating": 4,
             "color": "Gray"
         },
         {
@@ -385,6 +427,7 @@
             "desc": "Durable and practical school backpack for kids",
             "img": "kids_school_backpack-min.jpg",
             "price": 39.99,
+            "rating": 3,
             "color": "Blue"
         },
         {
@@ -394,6 +437,7 @@
             "desc": "Elegant and compact clutch purse for women",
             "img": "womens_clutch_purse-min.jpg",
             "price": 39.99,
+            "rating": 5,
             "color": "Black"
         },
         {
@@ -403,6 +447,7 @@
             "desc": "Elegant and compact clutch purse for women",
             "img": "womens_clutch_purse-min.jpg",
             "price": 39.99,
+            "rating": 5,
             "color": "Black"
         },
         {
@@ -412,6 +457,7 @@
             "desc": "Durable and practical school backpack for kids",
             "img": "kids_school_backpack-min.jpg",
             "price": 39.99,
+            "rating": 3,
             "color": "Blue"
         },
         {
@@ -421,6 +467,7 @@
             "desc": "Versatile and sturdy backpack for men",
             "img": "mens_backpack-min.jpg",
             "price": 69.99,
+            "rating": 4,
             "color": "Gray"
         },
         {
@@ -430,6 +477,7 @@
             "desc": "Stylish and spacious shoulder bag for women",
             "img": "womens_shoulder_bag-min.jpg",
             "price": 59.99,
+            "rating": 2,
             "color": "White"
         },
         {
@@ -439,6 +487,7 @@
             "desc": "Stylish and spacious shoulder bag for women",
             "img": "womens_shoulder_bag-min.jpg",
             "price": 59.99,
+            "rating": 2,
             "color": "White"
         },
         {
@@ -448,6 +497,7 @@
             "desc": "Versatile and sturdy backpack for men",
             "img": "mens_backpack-min.jpg",
             "price": 69.99,
+            "rating": 4,
             "color": "Gray"
         },
         {
@@ -457,6 +507,7 @@
             "desc": "Durable and practical school backpack for kids",
             "img": "kids_school_backpack-min.jpg",
             "price": 39.99,
+            "rating": 3,
             "color": "Blue"
         },
         {
@@ -466,6 +517,7 @@
             "desc": "Elegant and compact clutch purse for women",
             "img": "womens_clutch_purse-min.jpg",
             "price": 39.99,
+            "rating": 5,
             "color": "Black"
         },
         {
@@ -475,6 +527,7 @@
             "desc": "Elegant and compact clutch purse for women",
             "img": "womens_clutch_purse-min.jpg",
             "price": 39.99,
+            "rating": 5,
             "color": "Black"
         },
         {
@@ -484,6 +537,7 @@
             "desc": "Durable and practical school backpack for kids",
             "img": "kids_school_backpack-min.jpg",
             "price": 39.99,
+            "rating": 3,
             "color": "Blue"
         },
         {
@@ -493,6 +547,7 @@
             "desc": "Versatile and sturdy backpack for men",
             "img": "mens_backpack-min.jpg",
             "price": 69.99,
+            "rating": 4,
             "color": "Gray"
         },
         {
@@ -502,6 +557,7 @@
             "desc": "Stylish and spacious shoulder bag for women",
             "img": "womens_shoulder_bag-min.jpg",
             "price": 59.99,
+            "rating": 2,
             "color": "White"
         },
         {
@@ -511,6 +567,7 @@
             "desc": "Stylish and spacious shoulder bag for women",
             "img": "womens_shoulder_bag-min.jpg",
             "price": 59.99,
+            "rating": 2,
             "color": "White"
         },
         {
@@ -520,6 +577,7 @@
             "desc": "Versatile and sturdy backpack for men",
             "img": "mens_backpack-min.jpg",
             "price": 69.99,
+            "rating": 4,
             "color": "Gray"
         },
         {
@@ -529,6 +587,7 @@
             "desc": "Durable and practical school backpack for kids",
             "img": "kids_school_backpack-min.jpg",
             "price": 39.99,
+            "rating": 3,
             "color": "Blue"
         },
         {
@@ -538,6 +597,7 @@
             "desc": "Elegant and compact clutch purse for women",
             "img": "womens_clutch_purse-min.jpg",
             "price": 39.99,
+            "rating": 5,
             "color": "Black"
         },
         {
@@ -547,6 +607,7 @@
             "desc": "Elegant and compact clutch purse for women",
             "img": "womens_clutch_purse-min.jpg",
             "price": 39.99,
+            "rating": 5,
             "color": "Black"
         },
         {
@@ -556,6 +617,7 @@
             "desc": "Durable and practical school backpack for kids",
             "img": "kids_school_backpack-min.jpg",
             "price": 39.99,
+            "rating": 3,
             "color": "Blue"
         },
         {
@@ -565,6 +627,7 @@
             "desc": "Versatile and sturdy backpack for men",
             "img": "mens_backpack-min.jpg",
             "price": 69.99,
+            "rating": 4,
             "color": "Gray"
         },
         {
@@ -574,6 +637,7 @@
             "desc": "Stylish and spacious shoulder bag for women",
             "img": "womens_shoulder_bag-min.jpg",
             "price": 59.99,
+            "rating": 2,
             "color": "White"
         },
         {
@@ -583,6 +647,7 @@
             "desc": "Stylish and elegant wide-brim hat for women",
             "img": "wide_brim_hat_women-min.jpg",
             "price": 29.99,
+            "rating": 1,
             "color": "Beige"
         },
         {
@@ -592,6 +657,7 @@
             "desc": "Classic and timeless fedora hat for men",
             "img": "fedora_hat_men-min.jpg",
             "price": 39.99,
+            "rating": 3,
             "color": "Brown"
         },
         {
@@ -601,6 +667,7 @@
             "desc": "Warm and cozy beanie hat for women",
             "img": "beanie_hat_women-min.jpg",
             "price": 19.99,
+            "rating": 5,
             "color": "Gray"
         },
         {
@@ -610,6 +677,7 @@
             "desc": "Casual and comfortable baseball cap for men",
             "img": "baseball_cap_men-min.jpg",
             "price": 24.99,
+            "rating": 4,
             "color": "Gray"
         },
         {
@@ -619,6 +687,7 @@
             "desc": "Casual and comfortable baseball cap for men",
             "img": "baseball_cap_men-min.jpg",
             "price": 24.99,
+            "rating": 4,
             "color": "Gray"
         },
         {
@@ -628,6 +697,7 @@
             "desc": "Warm and cozy beanie hat for women",
             "img": "beanie_hat_women-min.jpg",
             "price": 19.99,
+            "rating": 5,
             "color": "Gray"
         },
         {
@@ -637,6 +707,7 @@
             "desc": "Classic and timeless fedora hat for men",
             "img": "fedora_hat_men-min.jpg",
             "price": 39.99,
+            "rating": 3,
             "color": "Brown"
         },
         {
@@ -646,6 +717,7 @@
             "desc": "Stylish and elegant wide-brim hat for women",
             "img": "wide_brim_hat_women-min.jpg",
             "price": 29.99,
+            "rating": 1,
             "color": "Beige"
         },
         {
@@ -655,6 +727,7 @@
             "desc": "Stylish and elegant wide-brim hat for women",
             "img": "wide_brim_hat_women-min.jpg",
             "price": 29.99,
+            "rating": 1,
             "color": "Beige"
         },
         {
@@ -664,6 +737,7 @@
             "desc": "Classic and timeless fedora hat for men",
             "img": "fedora_hat_men-min.jpg",
             "price": 39.99,
+            "rating": 3,
             "color": "Brown"
         },
         {
@@ -673,6 +747,7 @@
             "desc": "Warm and cozy beanie hat for women",
             "img": "beanie_hat_women-min.jpg",
             "price": 19.99,
+            "rating": 5,
             "color": "Gray"
         },
         {
@@ -682,6 +757,7 @@
             "desc": "Casual and comfortable baseball cap for men",
             "img": "baseball_cap_men-min.jpg",
             "price": 24.99,
+            "rating": 4,
             "color": "Gray"
         },
         {
@@ -691,6 +767,7 @@
             "desc": "Casual and comfortable baseball cap for men",
             "img": "baseball_cap_men-min.jpg",
             "price": 24.99,
+            "rating": 4,
             "color": "Gray"
         },
         {
@@ -700,6 +777,7 @@
             "desc": "Warm and cozy beanie hat for women",
             "img": "beanie_hat_women-min.jpg",
             "price": 19.99,
+            "rating": 5,
             "color": "Gray"
         },
         {
@@ -709,6 +787,7 @@
             "desc": "Classic and timeless fedora hat for men",
             "img": "fedora_hat_men-min.jpg",
             "price": 39.99,
+            "rating": 3,
             "color": "Brown"
         },
         {
@@ -718,6 +797,7 @@
             "desc": "Stylish and elegant wide-brim hat for women",
             "img": "wide_brim_hat_women-min.jpg",
             "price": 29.99,
+            "rating": 1,
             "color": "Beige"
         },
         {
@@ -727,6 +807,7 @@
             "desc": "Stylish and elegant wide-brim hat for women",
             "img": "wide_brim_hat_women-min.jpg",
             "price": 29.99,
+            "rating": 1,
             "color": "Beige"
         },
         {
@@ -736,6 +817,7 @@
             "desc": "Classic and timeless fedora hat for men",
             "img": "fedora_hat_men-min.jpg",
             "price": 39.99,
+            "rating": 3,
             "color": "Brown"
         },
         {
@@ -745,6 +827,7 @@
             "desc": "Warm and cozy beanie hat for women",
             "img": "beanie_hat_women-min.jpg",
             "price": 19.99,
+            "rating": 5,
             "color": "Gray"
         },
         {
@@ -754,6 +837,7 @@
             "desc": "Casual and comfortable baseball cap for men",
             "img": "baseball_cap_men-min.jpg",
             "price": 24.99,
+            "rating": 4,
             "color": "Gray"
         },
         {
@@ -763,6 +847,7 @@
             "desc": "Casual and comfortable baseball cap for men",
             "img": "baseball_cap_men-min.jpg",
             "price": 24.99,
+            "rating": 4,
             "color": "Gray"
         },
         {
@@ -772,6 +857,7 @@
             "desc": "Warm and cozy beanie hat for women",
             "img": "beanie_hat_women-min.jpg",
             "price": 19.99,
+            "rating": 5,
             "color": "Gray"
         },
         {
@@ -781,6 +867,7 @@
             "desc": "Classic and timeless fedora hat for men",
             "img": "fedora_hat_men-min.jpg",
             "price": 39.99,
+            "rating": 3,
             "color": "Brown"
         },
         {
@@ -790,6 +877,7 @@
             "desc": "Stylish and elegant wide-brim hat for women",
             "img": "wide_brim_hat_women-min.jpg",
             "price": 29.99,
+            "rating": 1,
             "color": "Beige"
         },
         {
@@ -799,6 +887,7 @@
             "desc": "Stylish and elegant wide-brim hat for women",
             "img": "wide_brim_hat_women-min.jpg",
             "price": 29.99,
+            "rating": 1,
             "color": "Beige"
         },
         {
@@ -808,6 +897,7 @@
             "desc": "Classic and timeless fedora hat for men",
             "img": "fedora_hat_men-min.jpg",
             "price": 39.99,
+            "rating": 3,
             "color": "Brown"
         },
         {
@@ -817,6 +907,7 @@
             "desc": "Warm and cozy beanie hat for women",
             "img": "beanie_hat_women-min.jpg",
             "price": 19.99,
+            "rating": 5,
             "color": "Gray"
         },
         {
@@ -826,6 +917,7 @@
             "desc": "Casual and comfortable baseball cap for men",
             "img": "baseball_cap_men-min.jpg",
             "price": 24.99,
+            "rating": 4,
             "color": "Gray"
         },
         {
@@ -835,6 +927,7 @@
             "desc": "Casual and comfortable baseball cap for men",
             "img": "baseball_cap_men-min.jpg",
             "price": 24.99,
+            "rating": 4,
             "color": "Gray"
         },
         {
@@ -844,6 +937,7 @@
             "desc": "Warm and cozy beanie hat for women",
             "img": "beanie_hat_women-min.jpg",
             "price": 19.99,
+            "rating": 5,
             "color": "Gray"
         },
         {
@@ -853,6 +947,7 @@
             "desc": "Classic and timeless fedora hat for men",
             "img": "fedora_hat_men-min.jpg",
             "price": 39.99,
+            "rating": 3,
             "color": "Brown"
         },
         {
@@ -862,6 +957,7 @@
             "desc": "Stylish and elegant wide-brim hat for women",
             "img": "wide_brim_hat_women-min.jpg",
             "price": 29.99,
+            "rating": 1,
             "color": "Beige"
         }
     ]
