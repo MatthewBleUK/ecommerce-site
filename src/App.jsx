@@ -31,7 +31,7 @@ function App() {
                             <ProductGrid
                                 category="bags"
                                 title="Bags"
-                                desc="Every bag is meticulously handcrafted with utmost care and attention to detail. From conceptualization to the final stitches, our skilled artisans pour their heart and soul into creating each masterpiece. We take pride in using eco-conscious materials, with a primary focus on recycled fibers and sustainable fabrics, to ensure our bags not only exude elegance but also contribute to a greener planet. "
+                                desc="Discover artisanal excellence in every bag. Our skilled artisans pour heart and soul into crafting each piece from concept to stitch, using eco-conscious materials for elegance with a greener conscience"
                             />
                         }
                     />
@@ -41,7 +41,7 @@ function App() {
                             <ProductGrid
                                 category="hats"
                                 title="Hats"
-                                desc="Introducing our remarkable assortment of hats, where artistry meets functionality. Handpicked materials are thoughtfully sourced, and each hat is crafted to bring you a stunning and versatile accessory. Designed to elevate your style and offer unparalleled comfort, our hats are a perfect blend of form and function."
+                                desc="Our remarkable assortment of hats, where artistry meets functionality. Handpicked materials are thoughtfully sourced, and each hat is crafted to bring you a stunning and versatile accessory. Designed to elevate your style and offer comfort."
                             />
                         }
                     />
@@ -51,7 +51,7 @@ function App() {
                         element={
                             <ProductGrid
                                 title="Products"
-                                desc="Using mostly recycled fibers, we create sustainable shoes that combine comfort with timeless style. Step into our shoes and experience the difference of artisanal craftsmanship and eco-conscious design."
+                                desc="Experience the latest in fashion trends! Explore a curated collection of stylish shoes, trendy bags, and chic hats for a complete and elevated look. Shop now and define your personal style"
                             />
                         }
                     />

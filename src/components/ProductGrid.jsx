@@ -10,6 +10,7 @@ import { ToastContainer } from "react-toastify";
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import ProductCounter from "./ProductCounter";
 
 const ITEMS_PER_PAGE = 16;
 const INITIAL_PAGE_COUNT = 1;
@@ -44,7 +45,6 @@ function ProductGrid({ category, title, desc }) {
     const getPaginatedData = () => {
         const startIndex = (pageCount - 1) * ITEMS_PER_PAGE;
         const endIndex = startIndex + ITEMS_PER_PAGE;
-
         return products.slice(0, endIndex);
     };
 
@@ -66,58 +66,62 @@ function ProductGrid({ category, title, desc }) {
     return (
         <>
             <CategoryDescription title={title} desc={desc} />
-            <ProductSorting
-                products={getCategoryProducts()}
-                setSortedProducts={setSortedProducts}
-            />
 
-            <div className="max-w-screen-2xl mx-auto p-9 pt-0 flex">
+            <div className="max-w-screen-2xl mx-auto p-9 flex">
                 <ProductFiltering
                     products={getCategoryProducts()}
                     setFilteredProducts={setFilteredProducts}
                 />
 
-                <ul
-                    id="product-list"
-                    className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 col-span-4 mt-2"
-                >
-                    {/* Renders products */}
-                    {getPaginatedData().map((product) => {
-                        return (
-                            <li
-                                key={product.id}
-                                className="flex flex-col product-item"
-                            >
-                                <a
-                                    href=""
-                                    className="hover:underline flex flex-col"
+                <div className="flex flex-col">
+                    <div className="flex max-w-screen-2xl gap-5 justify-between items-center text-sm">
+                        <ProductCounter
+                            count={getPaginatedData().length}
+                            total={getCategoryProducts().length}
+                        />
+                        <ProductSorting
+                            products={getCategoryProducts()}
+                            setSortedProducts={setSortedProducts}
+                        />
+                    </div>
+                    <ul className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 col-span-4 mt-2">
+                        {/* Renders products */}
+                        {getPaginatedData().map((product) => {
+                            return (
+                                <li
+                                    key={product.id}
+                                    className="flex flex-col product-item"
                                 >
-                                    <LazyLoadImage
-                                        effect="blur"
-                                        src={product.img}
-                                        alt={product.desc}
-                                        width={216}
-                                        height={216}
-                                    />
+                                    <a
+                                        href=""
+                                        className="hover:underline flex flex-col"
+                                    >
+                                        <LazyLoadImage
+                                            effect="blur"
+                                            src={product.img}
+                                            alt={product.desc}
+                                            width={216}
+                                            height={216}
+                                        />
 
-                                    <span className="text-base">
-                                        {product.title}
+                                        <span className="text-base">
+                                            {product.title}
+                                        </span>
+                                    </a>
+                                    <p className="w-3/4 text-sm my-1">
+                                        {product.desc}
+                                    </p>
+                                    <span className="text-lg">
+                                        ${product.price}
                                     </span>
-                                </a>
-                                <p className="w-3/4 text-sm my-1">
-                                    {product.desc}
-                                </p>
-                                <span className="text-lg">
-                                    ${product.price}
-                                </span>
 
-                                <AddToCartButton title={product.title} />
-                            </li>
-                        );
-                    })}
-                </ul>
+                                    <AddToCartButton title={product.title} />
+                                </li>
+                            );
+                        })}
+                    </ul>
+                </div>
             </div>
-
             <div className="flex max-w-screen-2xl justify-center mx-auto">
                 <div className="flex flex-col w-72"></div>
                 {products.length > pageCount * ITEMS_PER_PAGE && (
@@ -131,7 +135,6 @@ function ProductGrid({ category, title, desc }) {
                     </div>
                 )}
             </div>
-
             <ToastContainer />
         </>
     );

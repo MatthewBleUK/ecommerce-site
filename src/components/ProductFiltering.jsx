@@ -8,7 +8,6 @@ const ProductFiltering = ({ products, setFilteredProducts }) => {
 
     useEffect(() => {
         validate();
-        console.log(colors);
     }, [colors, price]);
 
     const filterByPrice = () => {
@@ -82,7 +81,7 @@ const ProductFiltering = ({ products, setFilteredProducts }) => {
     };
 
     return (
-        <div className="flex flex-col w-72 relative bottom-8 mr-5">
+        <div className="flex flex-col w-72 relative mr-5">
             <h2 className="text-4xl font-light mb-6">Filter by</h2>
 
             <div className="border-t border-gray-200 p-3 pt-5 pb-0">
