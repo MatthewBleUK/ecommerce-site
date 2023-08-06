@@ -76,16 +76,13 @@ function ProductGrid({ category, title, desc }) {
 
                 <div className="flex flex-col">
                     <div className="flex max-w-screen-2xl gap-5 justify-between items-center text-sm">
-                        <ProductCounter
-                            count={getPaginatedData().length}
-                            total={getCategoryProducts().length}
-                        />
+                        <ProductCounter total={getCategoryProducts().length} />
                         <ProductSorting
                             products={getCategoryProducts()}
                             setSortedProducts={setSortedProducts}
                         />
                     </div>
-                    <ul className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 col-span-4 mt-2">
+                    <ul className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 col-span-4 mt-2 mb-12">
                         {/* Renders products */}
                         {getPaginatedData().map((product) => {
                             return (
@@ -124,21 +121,29 @@ function ProductGrid({ category, title, desc }) {
                             );
                         })}
                     </ul>
+
+                    <div className="flex max-w-screen-2xl justify-center mx-auto">
+                        <div className="d-grid text-center">
+                            <div className="text-sm p-6">
+                                <ProductCounter
+                                    count={getPaginatedData().length}
+                                    total={getCategoryProducts().length}
+                                />
+                            </div>
+
+                            {products.length > pageCount * ITEMS_PER_PAGE && (
+                                <button
+                                    onClick={handleLoadMore}
+                                    className="washed-gray-bg hover:bg-gray-700 text-white font-bold py-2 px-4 mb-8"
+                                >
+                                    Load More
+                                </button>
+                            )}
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div className="flex max-w-screen-2xl justify-center mx-auto">
-                <div className="flex flex-col w-72"></div>
-                {products.length > pageCount * ITEMS_PER_PAGE && (
-                    <div className="d-grid mt-10 mb-16 text-center">
-                        <button
-                            onClick={handleLoadMore}
-                            className="washed-gray-bg hover:bg-gray-700 text-white font-bold py-2 px-4"
-                        >
-                            Load More
-                        </button>
-                    </div>
-                )}
-            </div>
+
             <ToastContainer />
         </>
     );

@@ -1,8 +1,14 @@
 function ProductCounter({ count, total }) {
     return (
-        <div>
-            {count} out of {total} products
-        </div>
+        <p>
+            {count ? (
+                <>
+                    You have viewed {count} of {total} products
+                </>
+            ) : (
+                <> {total} products </>
+            )}
+        </p>
     );
 }
 
