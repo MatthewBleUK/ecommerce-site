@@ -15,6 +15,8 @@ function App(props) {
                             src="logo-min.png"
                             className="w-100 h-10 mr-2"
                             alt="Logo"
+                            width={145}
+                            height={40}
                         />
                     </a>
                 </div>
@@ -51,7 +53,7 @@ function App(props) {
                         isOpen ? "block" : "hidden"
                     }`}
                 >
-                    <nav className="text-sm lg:flex-grow">
+                    <nav className="text-sm flex flex-col lg:flex-row lg:mt-0 relative top-4 lg:top-0">
                         <BrowserRouter>
                             <NavLink
                                 reloadDocument
@@ -60,8 +62,8 @@ function App(props) {
                                     isPending
                                         ? "pending"
                                         : isActive
-                                        ? "border-b border-gray-700 pb-1.5 mx-2.5"
-                                        : "hover:border-gray-700 border-b pb-1.5 border-transparent mx-2.5"
+                                        ? "lg:border-b lg:border-gray-700 mb-4 lg:mb-0 lg:pb-1.5 lg:mx-2.5 w-fit"
+                                        : "hover:border-gray-700 lg:border-b mb-4 lg:mb-0 lg:pb-1.5 border-transparent lg:mx-2.5 w-fit"
                                 }
                             >
                                 Home
@@ -75,8 +77,8 @@ function App(props) {
                                         isPending
                                             ? "pending"
                                             : isActive
-                                            ? "border-b border-gray-700 pb-1.5 mx-2.5"
-                                            : "hover:border-gray-700 border-b pb-1.5 border-transparent mx-2.5"
+                                            ? "lg:border-b lg:border-gray-700 mb-4 lg:mb-0 lg:pb-1.5 lg:mx-2.5 w-fit"
+                                            : "hover:border-gray-700 lg:border-b mb-4 lg:mb-0 lg:pb-1.5 border-transparent lg:mx-2.5 w-fit"
                                     }
                                 >
                                     {item}
