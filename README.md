@@ -1,6 +1,6 @@
 # C4 Nexus Ecommerce Site
 
-This is a C4 Nexus technical interview task for an ecommerce product listing page. The project was built using Vite React and Tailwind CSS.
+This is a C4 Nexus technical interview task for an e-commerce product listing page. The project was built using Vite React and Tailwind CSS.
 
 ## Features
 
