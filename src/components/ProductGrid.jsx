@@ -46,18 +46,22 @@ function ProductGrid({ category, title, desc }) {
     const getPaginatedData = () => {
         const startIndex = (pageCount - 1) * ITEMS_PER_PAGE;
         const endIndex = startIndex + ITEMS_PER_PAGE;
+
+        console.log(products.slice(0, endIndex));
         return products.slice(0, endIndex);
     };
 
-    // Makes sure setProducts consists of the correct filtered products and sorted order
+    /* This function makes sure 'products' state consists of the correct order and 
+       filtered product items */
     const orderProducts = () => {
-        // Sets the products state if it has not been sorted
+        /* Sets filtered products. If no filtered option is selected, filteredProduct
+           returns an object with all the products */
         if (sortedProducts.length == 0) {
-            return setProducts(filteredProducts); // filteredProducts will return all the products when no filter is applied
+            return setProducts(filteredProducts);
         }
 
-        // Set products state, only if it has been sorted
         setProducts(
+            // filters sortedProducts based on items in filteredProducts
             sortedProducts.filter((product) =>
                 filteredProducts.includes(product)
             )
