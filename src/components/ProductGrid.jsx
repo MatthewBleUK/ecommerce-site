@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 
 import productList from "../products.json";
 
-import CategoryDescription from "./CategoryDescription";
 import ProductSorting from "./ProductSorting";
 import ProductFiltering from "./ProductFiltering";
 import AddToCartButton from "./addToCartButton";
@@ -16,7 +15,7 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 const ITEMS_PER_PAGE = 12;
 const INITIAL_PAGE_COUNT = 1;
 
-function ProductGrid({ category, title, desc }) {
+function ProductGrid({ category }) {
     const [products, setProducts] = useState([]); // Holds the filtered / sorted products in the correct order
     const [pageCount, setPageCount] = useState(INITIAL_PAGE_COUNT); // Sets the page count state
     const [sortedProducts, setSortedProducts] = useState([]); // Holds the sorted products
@@ -33,7 +32,7 @@ function ProductGrid({ category, title, desc }) {
                 (product) => product.category === category
             );
         }
-        // Callback was used to fix state update problem with 'return productList.products'
+        // Callback was used instead of 'return productList.products'  to fix state update problem with sorting
         return productList.products.filter(
             (product) => typeof product.title === "string"
         );
@@ -47,7 +46,6 @@ function ProductGrid({ category, title, desc }) {
         const startIndex = (pageCount - 1) * ITEMS_PER_PAGE;
         const endIndex = startIndex + ITEMS_PER_PAGE;
 
-        console.log(products.slice(0, endIndex));
         return products.slice(0, endIndex);
     };
 
@@ -70,8 +68,6 @@ function ProductGrid({ category, title, desc }) {
 
     return (
         <>
-            <CategoryDescription title={title} desc={desc} />
-
             <div className="max-w-screen-2xl mx-auto p-9 flex flex-col md:flex-col lg:flex-row">
                 <div className="flex flex-col relative lg:mr-8  mb-5 lg:mb-0">
                     <ProductFiltering
