@@ -101,7 +101,7 @@ const ProductFiltering = ({ products, setFilteredProducts }) => {
                         className="flex items-center px-3 py-2 rounded text-black-500 hover:text-black-400"
                     >
                         <svg
-                            className={`w-5 h-5 text-gray-800 dark:text-white ${
+                            className={`w-5 h-5 text-gray-800 ${
                                 isOpen ? "hidden" : "block"
                             }`}
                             aria-hidden="true"
@@ -150,13 +150,13 @@ const ProductFiltering = ({ products, setFilteredProducts }) => {
                                 <input
                                     id={color}
                                     type="checkbox"
-                                    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                                    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
                                     onChange={handleColorFilter}
                                     value={color}
                                 />
                                 <label
                                     htmlFor={color}
-                                    className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                                    className="ml-2 text-sm font-medium text-gray-900"
                                 >
                                     {color}
                                 </label>
