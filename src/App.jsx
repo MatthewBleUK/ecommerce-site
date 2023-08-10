@@ -57,8 +57,11 @@ function App() {
                         path="/"
                         element={
                             <>
-                                <CategoryDescription desc="Experience the latest in fashion trends! Explore a curated collection of stylish shoes, trendy bags, and chic hats for a complete and elevated look. Shop now and define your personal style" />
-                                <ProductGrid title="Products" />
+                                <CategoryDescription
+                                    desc="Experience the latest in fashion trends! Explore a curated collection of stylish shoes, trendy bags, and chic hats for a complete and elevated look. Shop now and define your personal style"
+                                    title="Products"
+                                />
+                                <ProductGrid />
                             </>
                         }
                     />
