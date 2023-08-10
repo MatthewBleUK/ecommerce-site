@@ -1,6 +1,6 @@
-# C4 Nexus Ecommerce Site
+# Ecommerce Site
 
-This is a C4 Nexus technical interview task for an e-commerce product listing page. The project was built using Vite React and Tailwind CSS.
+This is a e-commerce site built using Vite React, Tailwind CSS, Node.js and MySQL.
 
 ## Features
 
@@ -81,10 +81,10 @@ Before rendering the items to the product grid, getPaginatedData() is called whi
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/MatthewBleUK/c4-nexus-react-ecommerce-assignment.git
+$ git clone https://github.com/MatthewBleUK/ecommerce-site.git
 
 # Go into the repository
-$ cd c4-nexus-react-ecommerce-assignment
+$ cd ecommerce-site
 
 # Install dependencies
 $ npm install
