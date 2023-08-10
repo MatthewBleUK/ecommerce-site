@@ -4,8 +4,6 @@ This is a e-commerce site built using Vite React, Tailwind CSS, Node.js and MySQ
 
 ## Features
 
-All requirements from the task were successfully implemented.
-
 The features are:
 
 -   [x] Responsive design
