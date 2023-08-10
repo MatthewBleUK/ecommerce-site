@@ -1,5 +1,7 @@
 # Ecommerce Site
 
+currently in progress. 
+
 This is a e-commerce site built using Vite React, Tailwind CSS, Node.js and MySQL.
 
 ## Features
