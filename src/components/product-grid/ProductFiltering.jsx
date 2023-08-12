@@ -53,14 +53,27 @@ const ProductFiltering = ({ products, setFilteredProducts }) => {
     const validate = () => {
         // If colors are set but no price input is provided
         if (filterByColors().length && !price.maxValue)
-            return setFilteredProducts(filterByColors());
+            return setFilteredProducts({
+                products: filterByColors(),
+                isFiltered: true,
+            });
 
         // If the max price value is set but no color value is specified
         if (!filterByColors().length && price.maxValue)
-            return setFilteredProducts(filterByPrice());
+            return setFilteredProducts({
+                products: filterByPrice(),
+                isFiltered: true,
+            });
 
         // If both price and colors are set
-        setFilteredProducts(filterByPriceAndColor());
+        if (filterByColors().length && price.maxValue) {
+            return setFilteredProducts({
+                products: filterByPriceAndColor(),
+                isFiltered: true,
+            });
+        }
+
+        setFilteredProducts({ products: products, isFiltered: false });
     };
 
     const handleColorFilter = (event) => {

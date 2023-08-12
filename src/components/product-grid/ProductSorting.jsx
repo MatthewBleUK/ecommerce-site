@@ -13,21 +13,23 @@ const ProductSorting = ({ products, setSortedProducts }) => {
     ];
 
     const handleSort = (selectedOption) => {
+        let sortedProducts = products;
+
         setSortCriteria(selectedOption.value);
 
         switch (selectedOption.value) {
             case "Featured":
-                products.sort((a, b) => a.id - b.id);
+                sortedProducts.sort((a, b) => a.id - b.id);
                 break;
             case "A-Z":
-                products.sort((a, b) => a.title.localeCompare(b.title));
+                sortedProducts.sort((a, b) => a.title.localeCompare(b.title));
                 break;
             case "Z-A":
-                products.sort((a, b) => b.title.localeCompare(a.title));
+                sortedProducts.sort((a, b) => b.title.localeCompare(a.title));
                 break;
             case "PriceAsc":
                 // Sorts price low to high, uses discounted_price if available
-                products.sort((a, b) => {
+                sortedProducts.sort((a, b) => {
                     const aPrice =
                         a.discounted_price != undefined
                             ? a.discounted_price
@@ -43,7 +45,7 @@ const ProductSorting = ({ products, setSortedProducts }) => {
                 break;
             case "PriceDesc":
                 // Sorts price high to low, uses discounted_price if available
-                products.sort((a, b) => {
+                sortedProducts.sort((a, b) => {
                     const aPrice =
                         a.discounted_price != undefined
                             ? a.discounted_price
@@ -61,7 +63,7 @@ const ProductSorting = ({ products, setSortedProducts }) => {
                 break;
         }
 
-        setSortedProducts(products);
+        setSortedProducts({ products: sortedProducts, isSorted: true });
     };
 
     return (

@@ -15,8 +15,9 @@ const INITIAL_PAGE_COUNT = 1;
 
 function ProductGrid({ category }) {
     const [products, setProducts] = useState([]); // Holds the current state of the products (e.g when after filtered or sorted)
-    const [sortedProducts, setSortedProducts] = useState([]);
-    const [filteredProducts, setFilteredProducts] = useState([]);
+    const [sortedProducts, setSortedProducts] = useState({});
+    const [filteredProducts, setFilteredProducts] = useState({});
+    const [pageCount, setPageCount] = useState(INITIAL_PAGE_COUNT);
 
     // Holds state of products from GET request
     const [productData, setProductData] = useState({
@@ -24,25 +25,30 @@ function ProductGrid({ category }) {
         isDataLoaded: false, // Ensures the useEffect hooks renders when fetch is returned
     });
 
-    const [pageCount, setPageCount] = useState(INITIAL_PAGE_COUNT);
+    useEffect(() => {
+        const fetchProductData = async () => {
+            try {
+                const response = await fetch("/api/products");
+                const data = await response.json();
 
-    const getProductData = async () => {
-        await fetch("/api/products")
-            .then((response) => {
-                return response.json();
-            })
-            .then((data) => {
                 setProductData({
                     products: data,
                     isDataLoaded: true,
                 });
-            });
-    };
+            } catch (error) {
+                console.error(
+                    "Error fetching product data from the Database:",
+                    error
+                );
+            }
+        };
+
+        fetchProductData();
+    }, []);
 
     useEffect(() => {
-        getProductData();
         validate();
-    }, [sortedProducts, filteredProducts, productData.isDataLoaded]);
+    }, [sortedProducts, filteredProducts, productData]);
 
     // Only returns the products with the correct category
     const getCategoryProducts = () => {
@@ -59,21 +65,21 @@ function ProductGrid({ category }) {
     /* This function makes sure the correct products are being displayed 
        when filtering/sorting is selected */
     const validate = () => {
-        /* Sets sorted products when no filtering */
-        if (filteredProducts.length == 0 && sortedProducts.length != 0) {
-            return setProducts(sortedProducts);
+        // Sets sorted products when no filtering
+        if (sortedProducts.isSorted && !filteredProducts.isFiltered) {
+            return setProducts(sortedProducts.products);
         }
 
-        /* Sets filtered products when no sorting */
-        if (sortedProducts.length == 0 && filteredProducts.length != 0) {
-            return setProducts(filteredProducts);
+        // Sets filtered products when no sorting
+        if (filteredProducts.isFiltered && !sortedProducts.isSorted) {
+            return setProducts(filteredProducts.products);
         }
 
-        /* Sets both */
-        if (sortedProducts.length > 0 && filteredProducts.length > 0) {
+        // Sets both
+        if (sortedProducts.isSorted && filteredProducts.isFiltered) {
             return setProducts(
-                sortedProducts.filter((product) =>
-                    filteredProducts.some(
+                sortedProducts.products.filter((product) =>
+                    filteredProducts.products.some(
                         (filteredProduct) => filteredProduct.id == product.id
                     )
                 )
