@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Select from "react-select";
 
 const ProductSorting = ({ products, setSortedProducts }) => {
-    const [sortCriteria, setSortCriteria] = useState("");
+    const [sortCriteria, setSortCriteria] = useState(""); // Used to update state of HTML select value
 
     const options = [
         { value: "Featured", label: "Featured" },
@@ -29,26 +29,27 @@ const ProductSorting = ({ products, setSortedProducts }) => {
                 // Sorts price low to high, uses discounted_price if available
                 products.sort((a, b) => {
                     const aPrice =
-                        a.discounted_price !== undefined
+                        a.discounted_price != undefined
                             ? a.discounted_price
                             : a.price;
                     const bPrice =
-                        b.discounted_price !== undefined
+                        b.discounted_price != undefined
                             ? b.discounted_price
                             : b.price;
 
                     return aPrice - bPrice;
                 });
+
                 break;
             case "PriceDesc":
                 // Sorts price high to low, uses discounted_price if available
                 products.sort((a, b) => {
                     const aPrice =
-                        a.discounted_price !== undefined
+                        a.discounted_price != undefined
                             ? a.discounted_price
                             : a.price;
                     const bPrice =
-                        b.discounted_price !== undefined
+                        b.discounted_price != undefined
                             ? b.discounted_price
                             : b.price;
 

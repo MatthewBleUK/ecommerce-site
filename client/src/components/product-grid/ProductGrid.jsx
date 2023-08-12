@@ -14,16 +14,17 @@ const ITEMS_PER_PAGE = 12;
 const INITIAL_PAGE_COUNT = 1;
 
 function ProductGrid({ category }) {
-    const [products, setProducts] = useState([]); // Holds the filtered / sorted products in the correct order
-    const [pageCount, setPageCount] = useState(INITIAL_PAGE_COUNT); // Sets the page count state
-    const [sortedProducts, setSortedProducts] = useState([]); // Holds the sorted products
-    const [filteredProducts, setFilteredProducts] = useState([]); // Holds the filtered products
+    const [products, setProducts] = useState([]); // Holds the current state of the products (e.g when after filtered or sorted)
+    const [sortedProducts, setSortedProducts] = useState([]);
+    const [filteredProducts, setFilteredProducts] = useState([]);
 
     // Holds state of products from GET request
     const [productData, setProductData] = useState({
         products: [],
-        isDataLoaded: false,
+        isDataLoaded: false, // Ensures the useEffect hooks renders when fetch is returned
     });
+
+    const [pageCount, setPageCount] = useState(INITIAL_PAGE_COUNT);
 
     const getProductData = async () => {
         await fetch("/api/products")
@@ -31,24 +32,56 @@ function ProductGrid({ category }) {
                 return response.json();
             })
             .then((data) => {
-                setProductData({ products: data, isDataLoaded: true });
+                setProductData({
+                    products: data,
+                    isDataLoaded: true,
+                });
             });
     };
 
     useEffect(() => {
         getProductData();
-        orderProducts();
-    }, [sortedProducts, filteredProducts]);
+        validate();
+    }, [sortedProducts, filteredProducts, productData.isDataLoaded]);
 
+    // Only returns the products with the correct category
     const getCategoryProducts = () => {
-        // Only returns the products with the correct category
         if (category) {
             return productData.products.filter(
                 (product) => product.category === category
             );
         }
 
+        // When no prop category is set (e.g on homepage)
         return productData.products;
+    };
+
+    /* This function makes sure the correct products are being displayed 
+       when filtering/sorting is selected */
+    const validate = () => {
+        /* Sets sorted products when no filtering */
+        if (filteredProducts.length == 0 && sortedProducts.length != 0) {
+            return setProducts(sortedProducts);
+        }
+
+        /* Sets filtered products when no sorting */
+        if (sortedProducts.length == 0 && filteredProducts.length != 0) {
+            return setProducts(filteredProducts);
+        }
+
+        /* Sets both */
+        if (sortedProducts.length > 0 && filteredProducts.length > 0) {
+            return setProducts(
+                sortedProducts.filter((product) =>
+                    filteredProducts.some(
+                        (filteredProduct) => filteredProduct.id == product.id
+                    )
+                )
+            );
+        }
+
+        // Else return all category products
+        return setProducts(getCategoryProducts());
     };
 
     const handleLoadMore = () => {
@@ -62,36 +95,14 @@ function ProductGrid({ category }) {
         return products.slice(0, endIndex);
     };
 
-    /* This function makes sure 'products' state consists of the correct order and 
-       filtered product items */
-    const orderProducts = () => {
-        /* Sets filtered products. If no filtered option is selected, filteredProduct
-           returns an object with all the products */
-        if (sortedProducts.length == 0) {
-            return setProducts(filteredProducts);
-        }
-
-        setProducts(
-            sortedProducts.filter((product) =>
-                filteredProducts.some(
-                    (filteredProduct) => filteredProduct.id == product.id
-                )
-            )
-        );
-    };
-
     return (
         <>
             <div className="max-w-screen-2xl mx-auto p-9 flex flex-col md:flex-col lg:flex-row">
                 <div className="flex flex-col relative lg:mr-8  mb-5 lg:mb-0">
-                    {productData.isDataLoaded ? (
-                        <ProductFiltering
-                            products={getCategoryProducts()}
-                            setFilteredProducts={setFilteredProducts}
-                        />
-                    ) : (
-                        <></>
-                    )}
+                    <ProductFiltering
+                        products={getCategoryProducts()}
+                        setFilteredProducts={setFilteredProducts}
+                    />
                 </div>
 
                 <div className="flex flex-col w-full">
@@ -101,14 +112,11 @@ function ProductGrid({ category }) {
                                 total={getCategoryProducts().length}
                             />
                         </div>
-                        {productData.isDataLoaded ? (
-                            <ProductSorting
-                                products={getCategoryProducts()}
-                                setSortedProducts={setSortedProducts}
-                            />
-                        ) : (
-                            <></>
-                        )}
+
+                        <ProductSorting
+                            products={getCategoryProducts()}
+                            setSortedProducts={setSortedProducts}
+                        />
                     </div>
 
                     <div className="min-h-[80%]">

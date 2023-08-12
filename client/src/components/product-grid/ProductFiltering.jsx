@@ -51,10 +51,6 @@ const ProductFiltering = ({ products, setFilteredProducts }) => {
 
     // Validates user input to return / set the correct products
     const validate = () => {
-        // If no filter is set
-        if (!filterByColors().length && !price.maxValue)
-            return setFilteredProducts(products);
-
         // If colors are set but no price input is provided
         if (filterByColors().length && !price.maxValue)
             return setFilteredProducts(filterByColors());
