@@ -36,10 +36,7 @@ function ProductGrid({ category }) {
                     isDataLoaded: true,
                 });
             } catch (error) {
-                console.error(
-                    "Error fetching product data from the Database:",
-                    error
-                );
+                console.log("Problem with API connectivity", error);
             }
         };
 
@@ -128,57 +125,68 @@ function ProductGrid({ category }) {
                     <div className="min-h-[80%]">
                         <ul className="mt-2 mb-12 product-list overflow-hidden">
                             {/* Renders products */}
-                            {getPaginatedData().map((product) => {
-                                return (
-                                    <li
-                                        key={product.id}
-                                        className="flex flex-col product-item justify-between"
-                                    >
-                                        <a
-                                            href=""
-                                            className="hover:underline flex flex-col"
+                            {getPaginatedData().length > 0 ? (
+                                getPaginatedData().map((product) => {
+                                    return (
+                                        <li
+                                            key={product.id}
+                                            className="flex flex-col product-item justify-between"
                                         >
-                                            <LazyLoadImage
-                                                effect="blur"
-                                                src={product.img}
-                                                alt={product.desc}
-                                                width={250}
-                                                height={250}
-                                                className="product-image"
+                                            <a
+                                                href=""
+                                                className="hover:underline flex flex-col"
+                                            >
+                                                <LazyLoadImage
+                                                    effect="blur"
+                                                    src={product.img}
+                                                    alt={product.desc}
+                                                    width={250}
+                                                    height={250}
+                                                    className="product-image"
+                                                />
+
+                                                <span className="text-base">
+                                                    {product.title}
+                                                </span>
+                                            </a>
+
+                                            <StarRatings
+                                                rating={product.rating}
                                             />
 
-                                            <span className="text-base">
-                                                {product.title}
-                                            </span>
-                                        </a>
+                                            <p className="h-fit text-sm my-1">
+                                                {product.description}
+                                            </p>
 
-                                        <StarRatings rating={product.rating} />
-
-                                        <p className="h-fit text-sm my-1">
-                                            {product.description}
-                                        </p>
-
-                                        {product.discounted_price ? (
-                                            <div className="float-left">
-                                                <span className="text-base line-through pr-2">
+                                            {product.discounted_price ? (
+                                                <div className="float-left">
+                                                    <span className="text-base line-through pr-2">
+                                                        ${product.price}
+                                                    </span>
+                                                    <span className="text-emerald-600 text-lg">
+                                                        $
+                                                        {
+                                                            product.discounted_price
+                                                        }
+                                                    </span>
+                                                </div>
+                                            ) : (
+                                                <span className="text-lg">
                                                     ${product.price}
                                                 </span>
-                                                <span className="text-emerald-600 text-lg">
-                                                    ${product.discounted_price}
-                                                </span>
-                                            </div>
-                                        ) : (
-                                            <span className="text-lg">
-                                                ${product.price}
-                                            </span>
-                                        )}
+                                            )}
 
-                                        <AddToCartButton
-                                            title={product.title}
-                                        />
-                                    </li>
-                                );
-                            })}
+                                            <AddToCartButton
+                                                title={product.title}
+                                            />
+                                        </li>
+                                    );
+                                })
+                            ) : (
+                                <span className="text-center w-full block mt-5">
+                                    No products in that price range.
+                                </span>
+                            )}
                         </ul>
                     </div>
 
