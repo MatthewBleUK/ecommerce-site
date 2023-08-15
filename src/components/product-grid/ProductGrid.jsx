@@ -59,7 +59,7 @@ function ProductGrid({ category }) {
         return productData.products;
     };
 
-    /* This function makes sure the correct products are being displayed 
+    /** This function makes sure the correct products are being displayed 
        when filtering/sorting is selected */
     const validate = () => {
         // Sets sorted products when no filtering
@@ -177,7 +177,7 @@ function ProductGrid({ category }) {
                                             )}
 
                                             <AddToCartButton
-                                                title={product.title}
+                                                product={product}
                                             />
                                         </li>
                                     );

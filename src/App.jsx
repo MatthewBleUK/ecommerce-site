@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import CategoryDescription from "./components/product-grid/CategoryDescription";
 import ProductGrid from "./components/product-grid/ProductGrid";
 import Footer from "./components/Footer";
+import Cart from "./components/cart/Cart";
 
 function App() {
     const navigationItems = ["Shoes", "Bags", "Hats"];
@@ -16,6 +17,26 @@ function App() {
 
             <Router>
                 <Routes>
+                    <Route
+                        path="/cart"
+                        element={
+                            <>
+                                <Cart />
+                            </>
+                        }
+                    ></Route>
+                    <Route
+                        path="/"
+                        element={
+                            <>
+                                <CategoryDescription
+                                    desc="Experience the latest in fashion trends! Explore a curated collection of stylish shoes, trendy bags, and chic hats for a complete and elevated look. Shop now and define your personal style"
+                                    title="Products"
+                                />
+                                <ProductGrid />
+                            </>
+                        }
+                    />
                     <Route
                         path="/shoes"
                         element={
@@ -49,19 +70,6 @@ function App() {
                                     desc="Our remarkable assortment of hats, where artistry meets functionality. Handpicked materials are thoughtfully sourced, and each hat is crafted to bring you a stunning and versatile accessory. Designed to elevate your style and offer comfort."
                                 />
                                 <ProductGrid category="hats" />
-                            </>
-                        }
-                    />
-
-                    <Route
-                        path="/"
-                        element={
-                            <>
-                                <CategoryDescription
-                                    desc="Experience the latest in fashion trends! Explore a curated collection of stylish shoes, trendy bags, and chic hats for a complete and elevated look. Shop now and define your personal style"
-                                    title="Products"
-                                />
-                                <ProductGrid />
                             </>
                         }
                     />

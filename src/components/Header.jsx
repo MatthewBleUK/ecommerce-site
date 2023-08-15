@@ -117,7 +117,7 @@ function App(props) {
                     </a>
 
                     <a
-                        href="#"
+                        href="/cart"
                         className="px-4 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300"
                     >
                         <svg width="24" height="24" viewBox="0 0 24 24">
