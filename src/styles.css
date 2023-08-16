@@ -85,3 +85,9 @@
     color: #5a5454;
     font-weight: 400;
 }
+
+/* Cart */
+
+input[type="number"]::-webkit-inner-spin-button {
+    opacity: 1;
+}

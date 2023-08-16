@@ -1,17 +1,17 @@
-import React from "react";
-import { useState } from "react";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 function Cart() {
+    // State for cart items and total price
     const [cartItems, setCartItems] = useState([]);
-    const [totalPrice, setTotalPrice] = useState();
+    const [totalPrice, setTotalPrice] = useState(0);
 
-    // Holds state of products from GET request
+    // State for product data from API
     const [productData, setProductData] = useState({
         products: [],
         isDataLoaded: false,
     });
 
+    // Fetch product data from API when cart items change
     useEffect(() => {
         const fetchProductData = async () => {
             try {
@@ -30,58 +30,54 @@ function Cart() {
         fetchProductData();
     }, [cartItems]);
 
+    // Update cart items and total price when product data is loaded
     useEffect(() => {
         const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
 
-        if (productData.isDataLoaded) {
-            const combinedObject = productData.products
-                .filter((obj1) =>
-                    existingCart.some((obj2) => obj2.id === obj1.id)
+        setCartItems(
+            productData.products
+                .filter((product) =>
+                    existingCart.some((cartItem) => cartItem.id === product.id)
                 )
-                .map((item1) => {
-                    const matchingItem2 = existingCart.find(
-                        (item2) => item2.id === item1.id
+                .map((product) => {
+                    const matchingCartItem = existingCart.find(
+                        (cartItem) => cartItem.id === product.id
                     );
 
-                    // Creates new properies for combinedObject
-                    if (matchingItem2) {
-                        const totalPrice = matchingItem2.value * item1.price;
+                    if (matchingCartItem.quantity > 0) {
+                        const totalProductPrice = (
+                            matchingCartItem.quantity * product.price
+                        ).toFixed(2);
 
                         return {
-                            id: item1.id,
-                            title: item1.title,
-                            img: item1.img,
-                            price: item1.price,
-                            value: matchingItem2.value,
-                            total_price: totalPrice,
+                            ...product,
+                            quantity: matchingCartItem.quantity,
+                            total_price: parseFloat(totalProductPrice),
                         };
                     }
-                });
 
-            setCartItems(combinedObject);
-            calculateTotalPrice();
-        }
+                    return null;
+                })
+                .filter(Boolean)
+        );
+
+        calculateTotalPrice();
     }, [productData]);
 
+    // Calculate total price of items in the cart
     const calculateTotalPrice = () => {
-        setTotalPrice(
-            cartItems.reduce((totalPrice, object) => {
-                return totalPrice + object.total_price;
-            }, 0)
-        );
+        let totalPrice = cartItems.reduce((total, item) => {
+            return total + parseFloat(item.total_price);
+        }, 0);
+
+        setTotalPrice(parseFloat(totalPrice.toFixed(2)));
     };
 
+    // Remove an item from the cart
     const handleRemoveFromCart = (id) => {
-        let updatedCart = cartItems;
+        const updatedCart = cartItems.filter((item) => item.id !== id);
 
-        const findIndex = updatedCart.findIndex((object) => {
-            return object.id === id;
-        });
-
-        // Remove 1 item with that index
-        updatedCart.splice(findIndex, 1);
-
-        if (cartItems.length != 0) {
+        if (updatedCart.length !== 0) {
             localStorage.setItem("cart", JSON.stringify(updatedCart));
         } else {
             localStorage.removeItem("cart");
@@ -90,28 +86,15 @@ function Cart() {
         setCartItems(updatedCart);
     };
 
+    // Handle quantity change for an item in the cart
     const handleQuantityChange = (event, id) => {
-        let updatedCart = cartItems;
-        let quantity = event.target.value;
+        const updatedCart = [...cartItems];
+        const newQuantity = event.target.value;
 
-        const findIndex = updatedCart.findIndex((object) => {
-            return object.id === id;
-        });
+        const index = updatedCart.findIndex((item) => item.id === id);
 
-        // if it equals 0 and cartItem length is equal to 1, empty state and delete local storage
-        if (quantity == 0 && cartItems.length == 1) {
-            updatedCart = [];
-            localStorage.removeItem("cart");
-        }
-
-        // if it equals 0, remove from state and local storage
-        if (quantity == 0) {
-            updatedCart.splice(findIndex, 1);
-        }
-
-        // If it is not just update value
-        if (quantity != 0) {
-            updatedCart[findIndex].value = event.target.value;
+        if (newQuantity != 0 || (newQuantity == 0 && newQuantity != "")) {
+            updatedCart[index].quantity = Number(newQuantity);
         }
 
         localStorage.setItem("cart", JSON.stringify(updatedCart));
@@ -119,6 +102,7 @@ function Cart() {
         setCartItems(updatedCart);
     };
 
+    // Handle checkout
     const handleCheckOut = () => {
         alert("success");
     };
@@ -138,7 +122,7 @@ function Cart() {
                                 <th className="py-3 font-normal pl-4 sm:pl-0 items-center sm:items-start">
                                     Quantity
                                 </th>
-                                <th className="py-3 font-normal text-right">
+                                <th className="py-3 font-normal text-right w-1/4">
                                     Total
                                 </th>
                             </tr>
@@ -156,7 +140,7 @@ function Cart() {
                                                 height={150}
                                                 className="mr-8"
                                             ></img>
-                                            <div className="hidden sm:flex sm:flex flex-col">
+                                            <div className="hidden sm:flex flex-col mr-2">
                                                 <span className="text-lg font-medium text-gray-900">
                                                     {product.title}
                                                 </span>
@@ -172,15 +156,16 @@ function Cart() {
                                             <input
                                                 type="number"
                                                 min={0}
-                                                max={100}
-                                                placeholder={product.value}
-                                                className="w-12 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5"
-                                                onChange={(event) =>
+                                                max={99}
+                                                defaultValue={product.quantity}
+                                                className="w-12 sm:w-16 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5"
+                                                onKeyUp={(event) =>
                                                     handleQuantityChange(
                                                         event,
                                                         product.id
                                                     )
                                                 }
+                                                step="1"
                                             ></input>
 
                                             <button

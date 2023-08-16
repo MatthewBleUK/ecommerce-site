@@ -8,11 +8,11 @@ function AddToCartButton({ product }) {
         // Checks if product id exists in cart
         const itemIndex = cart.findIndex((item) => item.id === product.id);
 
-        // If item exists, increment else add to cart object
+        // If item exists, increment else add to cart
         if (itemIndex !== -1) {
-            cart[itemIndex].value++;
+            cart[itemIndex].quantity++;
         } else {
-            cart.push({ id: product.id, value: 1 });
+            cart.push({ id: product.id, quantity: parseInt(1) });
         }
 
         localStorage.setItem("cart", JSON.stringify(cart));
