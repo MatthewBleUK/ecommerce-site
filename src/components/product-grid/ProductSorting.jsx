@@ -68,7 +68,7 @@ const ProductSorting = ({ products, setSortedProducts }) => {
 
     return (
         <div className="flex gap-2.5">
-            <label htmlFor="sortBy" className="gap-2 items-center flex">
+            <label className="gap-2 items-center flex">
                 <svg width="16" height="12" viewBox="0 0 16 12">
                     <path d="M11.87 3.8a2.5 2.5 0 0 1-4.74 0H1.25a.75.75 0 1 1 0-1.5H7.1a2.5 2.5 0 0 1 4.8 0h2.85a.75.75 0 0 1 0 1.5h-2.88ZM10.5 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM.5 9.05c0-.41.34-.75.75-.75H4.1a2.5 2.5 0 0 1 4.8 0h5.85a.75.75 0 0 1 0 1.5H8.87a2.5 2.5 0 0 1-4.74 0H1.25a.75.75 0 0 1-.75-.75Zm6 .95a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
                 </svg>
@@ -79,7 +79,6 @@ const ProductSorting = ({ products, setSortedProducts }) => {
                 options={options}
                 value={options.find((option) => option.value === sortCriteria)}
                 onChange={handleSort}
-                id="sortBy"
                 className="sortByDropDown items-center w-36 sm:w-48"
             />
         </div>

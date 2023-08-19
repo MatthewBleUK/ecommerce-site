@@ -20,7 +20,7 @@ function Footer() {
                             </li>
                             <li>
                                 <a href="#" className="hover:underline">
-                                    Contact Us
+                                    Contact us
                                 </a>
                             </li>
                         </ul>

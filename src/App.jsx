@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import AnnouncementBar from "./components/AnnouncementBar";
@@ -7,13 +8,16 @@ import ProductGrid from "./components/product-grid/ProductGrid";
 import Footer from "./components/Footer";
 import Cart from "./components/cart/Cart";
 
+export const Context = React.createContext();
+
 function App() {
+    const [cartCounter, setCartCounter] = useState(0);
     const navigationItems = ["Shoes", "Bags", "Hats"];
 
     return (
-        <>
-            <AnnouncementBar title="Free Shipping to Bulgaria" />
-            <Header nav={navigationItems} />
+        <Context.Provider value={[cartCounter, setCartCounter]}>
+            <AnnouncementBar title="Free Shipping in Europe" />
+            <Header navigationItems={navigationItems} />
 
             <Router>
                 <Routes>
@@ -77,7 +81,7 @@ function App() {
             </Router>
 
             <Footer />
-        </>
+        </Context.Provider>
     );
 }
 

@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState, useContext } from "react";
+import { Context } from "../../App.jsx";
 
 function CartTable({ cartItems, setCartItems }) {
+    // Get cartCounter from useContext
+    const [cartCounter, setCartCounter] = useContext(Context);
+
     // Remove an item from the cart
     const handleRemoveFromCart = (id) => {
         const updatedCart = cartItems.filter((item) => item.id !== id);
@@ -32,6 +36,7 @@ function CartTable({ cartItems, setCartItems }) {
 
         setLocalStorage(updatedCart);
         setCartItems(updatedCart);
+        calculateCartQuantity();
     };
 
     const setLocalStorage = (updatedCart) => {
@@ -50,6 +55,19 @@ function CartTable({ cartItems, setCartItems }) {
         } else {
             localStorage.removeItem("cart");
         }
+
+        calculateCartQuantity();
+    };
+
+    const calculateCartQuantity = () => {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let counter = 0;
+
+        for (let x in cart) {
+            counter += cart[x].quantity;
+        }
+
+        setCartCounter(counter);
     };
 
     return (

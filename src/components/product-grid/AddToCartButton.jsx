@@ -1,7 +1,13 @@
+import React, { useContext } from "react";
+import { Context } from "../../App.jsx";
+
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function AddToCartButton({ product }) {
+    // Get cartCounter from useContext
+    const [cartCounter, setCartCounter] = useContext(Context);
+
     const handleAddToCart = () => {
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -16,6 +22,9 @@ function AddToCartButton({ product }) {
         }
 
         localStorage.setItem("cart", JSON.stringify(cart));
+
+        // Increment cartCounter
+        setCartCounter(cartCounter + 1);
 
         displayCartNotification(product.title);
     };

@@ -1,9 +1,26 @@
-import React, { useState } from "react";
-import { BrowserRouter, NavLink } from "react-router-dom";
+import React, { useState, useContext } from "react";
+import { Context } from "../App.jsx";
 
-function App(props) {
+import { BrowserRouter, NavLink } from "react-router-dom";
+import { useEffect } from "react";
+
+function App({ navigationItems }) {
     // Sets state for mobile hamburger menu
     const [isOpen, setIsOpen] = useState(false);
+    // Get cartCounter from useContext
+    const [cartCounter, setCartCounter] = useContext(Context);
+
+    useEffect(() => {
+        // Calculates how many item quantities in cart
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let counter = 0;
+
+        for (let x in cart) {
+            counter += cart[x].quantity;
+        }
+
+        setCartCounter(counter);
+    }, []);
 
     return (
         <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
@@ -68,7 +85,7 @@ function App(props) {
                             >
                                 Home
                             </NavLink>
-                            {props.nav.map((item) => (
+                            {navigationItems.map((item) => (
                                 <NavLink
                                     reloadDocument
                                     key={item}
@@ -84,6 +101,20 @@ function App(props) {
                                     {item}
                                 </NavLink>
                             ))}
+
+                            <NavLink
+                                reloadDocument
+                                to="cart"
+                                className={({ isActive, isPending }) =>
+                                    isPending
+                                        ? "pending"
+                                        : isActive
+                                        ? "lg:border-b lg:border-gray-700 mb-4 lg:mb-0 lg:pb-1.5 lg:mx-2.5 w-fit lg:hidden"
+                                        : "hover:border-gray-700 lg:border-b mb-4 lg:mb-0 lg:pb-1.5 border-transparent lg:mx-2.5 w-fit lg:hidden"
+                                }
+                            >
+                                Cart
+                            </NavLink>
                         </BrowserRouter>
                     </nav>
                 </div>
@@ -129,6 +160,15 @@ function App(props) {
                                 d="M18 18.2a.5.5 0 0 0 0-1h-7.99a2.5 2.5 0 0 1-2.46-2.06l-.123-.688h9.16a2.5 2.5 0 0 0 2.355-1.66l1.55-4.34a1.5 1.5 0 0 0-1.413-2.004H5.997l-.065-.364A3.5 3.5 0 0 0 2.488 3.2h-.99a.5.5 0 1 0 0 1h.99a2.5 2.5 0 0 1 2.46 2.06l1.617 9.057a3.5 3.5 0 0 0 3.446 2.884H18ZM6.176 7.45l12.903-.001a.5.5 0 0 1 .47.668l-1.548 4.34a1.5 1.5 0 0 1-1.413.996h-9.34L6.176 7.45Z"
                             ></path>
                         </svg>
+                        <div className="absolute">
+                            {cartCounter > 0 ? (
+                                <span className="washed-gray-bg text-white text-xs relative bottom-9 left-4 py-0.5 px-1.5 rounded-full">
+                                    {cartCounter}
+                                </span>
+                            ) : (
+                                <></>
+                            )}
+                        </div>
                     </a>
                 </div>
             </div>
