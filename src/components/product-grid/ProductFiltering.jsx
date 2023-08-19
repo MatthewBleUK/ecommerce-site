@@ -145,30 +145,28 @@ const ProductFiltering = ({ products, setFilteredProducts }) => {
 
                     <ul className="flex flex-row lg:flex-col mb-4 mt-4 lg:ml-4 flex-wrap">
                         {/* Creates a set to remove duplicates and renders each color */}
-                        {[
-                            ...new Set(
-                                products.map((product) => product.color)
-                            ),
-                        ].map((color, index) => (
-                            <li
-                                key={index}
-                                className="flex items-center pt-2 pb-2 pl-4"
-                            >
-                                <input
-                                    id={color}
-                                    type="checkbox"
-                                    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
-                                    onChange={handleColorFilter}
-                                    value={color}
-                                />
-                                <label
-                                    htmlFor={color}
-                                    className="ml-2 text-sm font-medium text-gray-900"
+                        {[...new Set(products.map((product) => product.color))]
+                            .sort()
+                            .map((color, index) => (
+                                <li
+                                    key={index}
+                                    className="flex items-center pt-2 pb-2 pl-4"
                                 >
-                                    {color}
-                                </label>
-                            </li>
-                        ))}
+                                    <input
+                                        id={color}
+                                        type="checkbox"
+                                        className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                                        onChange={handleColorFilter}
+                                        value={color}
+                                    />
+                                    <label
+                                        htmlFor={color}
+                                        className="ml-2 text-sm font-medium text-gray-900"
+                                    >
+                                        {color}
+                                    </label>
+                                </li>
+                            ))}
                     </ul>
                 </div>
 
