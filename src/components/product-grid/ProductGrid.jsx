@@ -15,6 +15,7 @@ const INITIAL_PAGE_COUNT = 1;
 
 function ProductGrid({ category }) {
     const [products, setProducts] = useState([]); // Holds the current state of the products (e.g when after filtered or sorted)
+
     const [sortedProducts, setSortedProducts] = useState({});
     const [filteredProducts, setFilteredProducts] = useState({});
     const [pageCount, setPageCount] = useState(INITIAL_PAGE_COUNT);
@@ -133,13 +134,13 @@ function ProductGrid({ category }) {
                                             className="flex flex-col product-item justify-between"
                                         >
                                             <a
-                                                href=""
+                                                href={"products/" + product.uri}
                                                 className="hover:underline flex flex-col"
                                             >
                                                 <LazyLoadImage
                                                     effect="blur"
-                                                    src={product.img}
-                                                    alt={product.desc}
+                                                    src={product.image}
+                                                    alt={product.description}
                                                     width={250}
                                                     height={250}
                                                     className="product-image"

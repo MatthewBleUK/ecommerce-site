@@ -91,3 +91,11 @@
 input[type="number"]::-webkit-inner-spin-button {
     opacity: 1;
 }
+
+/* Product page */
+
+.lazyimage {
+    display: flex !important;
+    justify-content: center;
+    margin-right: 0px;
+}

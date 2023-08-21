@@ -16,14 +16,20 @@ app.get("/api/products", (req, res) => {
     });
 });
 
-app.get("/categories", (req, res) => {
-    database.query("SELECT * FROM categories", (error, results) => {
-        if (error) {
-            return res.status(500).json({ error: "An error occurred" });
-        }
+app.get("/api/products/:id", (req, res) => {
+    const productId = req.params.id;
 
-        res.json(results);
-    });
+    database.query(
+        "SELECT * FROM products WHERE uri = ? LIMIT 1",
+        [productId],
+        (error, results) => {
+            if (error) {
+                return res.status(500).json({ error: "An error occurred" });
+            }
+
+            res.json(results);
+        }
+    );
 });
 
 app.listen(PORT, () => {

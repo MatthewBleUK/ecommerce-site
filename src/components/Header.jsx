@@ -29,7 +29,7 @@ function App({ navigationItems }) {
                 <div className="">
                     <a href="/">
                         <img
-                            src="logo-min.png"
+                            src="/logo-min.png"
                             className="w-100 h-10 mr-2"
                             alt="Logo"
                             width={145}

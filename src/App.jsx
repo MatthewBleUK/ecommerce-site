@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, createContext } from "react";
+
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import AnnouncementBar from "./components/AnnouncementBar";
@@ -7,8 +8,9 @@ import CategoryDescription from "./components/product-grid/CategoryDescription";
 import ProductGrid from "./components/product-grid/ProductGrid";
 import Footer from "./components/Footer";
 import Cart from "./components/cart/Cart";
+import ProductPage from "./components/product-page/ProductPage";
 
-export const Context = React.createContext();
+export const Context = createContext();
 
 function App() {
     const [cartCounter, setCartCounter] = useState(0);
@@ -21,14 +23,7 @@ function App() {
 
             <Router>
                 <Routes>
-                    <Route
-                        path="/cart"
-                        element={
-                            <>
-                                <Cart />
-                            </>
-                        }
-                    ></Route>
+                    <Route path="/cart" element={<Cart />}></Route>
                     <Route
                         path="/"
                         element={
@@ -77,6 +72,7 @@ function App() {
                             </>
                         }
                     />
+                    <Route path="/products/:id" element={<ProductPage />} />
                 </Routes>
             </Router>
 
