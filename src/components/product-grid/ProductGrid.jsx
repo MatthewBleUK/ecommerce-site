@@ -203,7 +203,7 @@ function ProductGrid({ category }) {
                             {products.length > pageCount * ITEMS_PER_PAGE && (
                                 <button
                                     onClick={handleLoadMore}
-                                    className="washed-gray-bg hover:bg-gray-700 text-white font-bold py-2 px-4 mb-8"
+                                    className="washed-gray-bg hover:bg-gray-700 text-white font-normal py-2 px-8 mb-8"
                                 >
                                     Load More
                                 </button>
