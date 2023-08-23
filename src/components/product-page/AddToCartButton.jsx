@@ -57,7 +57,7 @@ function AddToCartButton({ product }) {
             <div className="flex items-center border border-gray-200 rounded w-32 mt-4">
                 <button
                     type="button"
-                    className="w-10 h-10 leading-10 text-gray-600 transition hover:opacity-75"
+                    className="w-10 h-10 leading-10 text-gray-600 transition hover:opacity-75 border-gray-200 border-r"
                     onClick={(event) => handleQuantityChange(event)}
                 >
                     &#8722;
@@ -73,7 +73,7 @@ function AddToCartButton({ product }) {
 
                 <button
                     type="button"
-                    className="w-10 h-10 leading-10 text-gray-600 transition hover:opacity-75"
+                    className="w-10 h-10 leading-10 text-gray-600 transition hover:opacity-75 border-gray-200 border-l"
                     onClick={(event) => handleQuantityChange(event)}
                 >
                     &#43;
@@ -81,7 +81,7 @@ function AddToCartButton({ product }) {
             </div>
 
             <button
-                className="w-full md:w-48 py-2 px-8 md:p-2 text-sm  mt-2.5 transition ease-in duration-200 washed-gray-bg hover:bg-white text-white hover:text-black border border-gray-800 hover:border-gray-300"
+                className="w-full md:w-60 py-2 px-8 md:p-2 text-sm mt-4 transition ease-in duration-200 bg-white hover:bg-gray-800 hover:text-white text-black border hover:border-gray-800 border-gray-300"
                 onClick={() => handleAddToCart()}
             >
                 Add to Cart

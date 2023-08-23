@@ -6,6 +6,7 @@ import AddToCartButton from "./AddToCartButton";
 import { ToastContainer } from "react-toastify";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import RelatedProducts from "./RelatedProducts";
 
 function ProductPage() {
     const [product, setProduct] = useState([]);
@@ -28,46 +29,48 @@ function ProductPage() {
 
     return (
         <>
-            <div className="max-w-screen-2xl mx-auto p-9 flex flex-col md:flex-col lg:flex-row mt-6 mb-6">
+            <div className="max-w-screen-2xl mx-auto p-9 flex flex-col lg:flex-row mt-6 mb-8">
                 {product ? (
                     product.map((product) => {
                         return (
                             <div
-                                className="flex flex-col md:flex-row w-full"
+                                className="flex flex-col lg:flex-row w-full gap-x-24 justify-center"
                                 key={product.id}
                             >
-                                <div className="w-full md:w-2/4 first-letter:flex justify-end">
+                                <div className="flex justify-center">
                                     <LazyLoadImage
                                         effect="blur"
                                         src={"../" + product.image}
                                         alt={product.description}
-                                        width={550}
-                                        height={550}
-                                        className="w-10/12 min-w-[50%] mb-6"
-                                        wrapperClassName="lazyimage"
+                                        className=""
+                                        wrapperClassName="product-image mb-8 lg:mb-0"
                                     />
                                 </div>
 
-                                <div className="w-full md:w-2/4 flex flex-col">
-                                    <h1 className="text-4xl font-bold mb-1">
+                                <div className="flex flex-col w-full lg:max-w-lg">
+                                    <h1 className="text-3xl mb-1">
                                         {product.title}
                                     </h1>
+
                                     <StarRatings rating={product.rating} />
+
                                     {product.discounted_price ? (
-                                        <div className="float-left pt-3 pb-3">
-                                            <span className="text-base line-through pr-2 text-xl">
+                                        <div className="float-left pt-3 pb-3 border-b mb-2">
+                                            <span className="line-through pr-2 text-lg">
                                                 ${product.price}
                                             </span>
-                                            <span className="text-emerald-600 text-2xl">
+
+                                            <span className="text-emerald-600 text-xl">
                                                 ${product.discounted_price}
                                             </span>
                                         </div>
                                     ) : (
-                                        <span className="text-2xl pt-3 pb-3">
+                                        <span className="pt-3 pb-3 border-b mb-2 text-xl">
                                             ${product.price}
                                         </span>
                                     )}
-                                    <p className="pt-3 pb-3 w-11/12">
+
+                                    <p className="pt-3 pb-3 w-full text-base">
                                         Lorem ipsum dolor sit amet, consectetur
                                         adipiscing elit, sed do eiusmod tempor
                                         incididunt ut labore et dolore magna
@@ -75,7 +78,8 @@ function ProductPage() {
                                         nostrud exercitation ullamco laboris
                                         nisi ut aliquip ex ea commodo consequat.
                                     </p>
-                                    <p className="pt-3 pb-3 w-11/12">
+
+                                    <p className="pt-3 pb-3 w-full text-base">
                                         Duis aute irure dolor in reprehenderit
                                         in voluptate velit esse cillum dolore eu
                                         fugiat nulla pariatur. Excepteur sint
@@ -95,6 +99,12 @@ function ProductPage() {
 
                 <ToastContainer />
             </div>
+
+            {product.length > 0 ? (
+                <RelatedProducts category={product[0].category} />
+            ) : (
+                <p>Loading...</p>
+            )}
         </>
     );
 }
