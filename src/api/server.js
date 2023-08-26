@@ -32,6 +32,23 @@ app.get("/api/products/:id", (req, res) => {
     );
 });
 
+// Returns 3 products from that category
+app.get("/api/products/related/:id", (req, res) => {
+    const category = req.params.id;
+
+    database.query(
+        "SELECT * FROM products WHERE category = ? LIMIT 4;",
+        [category],
+        (error, results) => {
+            if (error) {
+                return res.status(500).json({ error: "An error occurred" });
+            }
+
+            res.json(results);
+        }
+    );
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
