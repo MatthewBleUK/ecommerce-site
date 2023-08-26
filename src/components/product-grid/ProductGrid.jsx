@@ -143,7 +143,6 @@ function ProductGrid({ category }) {
                                                     alt={product.description}
                                                     width={250}
                                                     height={250}
-                                                    className="product-image"
                                                 />
 
                                                 <span className="text-base">
@@ -203,7 +202,7 @@ function ProductGrid({ category }) {
                             {products.length > pageCount * ITEMS_PER_PAGE && (
                                 <button
                                     onClick={handleLoadMore}
-                                    className="washed-gray-bg hover:bg-gray-700 text-white font-normal py-2 px-8 mb-8"
+                                    className="text-black border bg-white font-normal py-2 px-8 mb-8"
                                 >
                                     Load More
                                 </button>

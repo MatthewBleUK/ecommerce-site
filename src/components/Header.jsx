@@ -70,7 +70,7 @@ function App({ navigationItems }) {
                         isOpen ? "block" : "hidden"
                     }`}
                 >
-                    <nav className="text-sm flex flex-col lg:flex-row lg:mt-0 relative top-4 lg:top-0">
+                    <nav className="text-sm flex flex-col lg:flex-row lg:mt-0 relative top-4 lg:top-1 lg:items-center">
                         <BrowserRouter>
                             <NavLink
                                 reloadDocument
@@ -79,8 +79,8 @@ function App({ navigationItems }) {
                                     isPending
                                         ? "pending"
                                         : isActive
-                                        ? "lg:border-b lg:border-gray-700 mb-4 lg:mb-0 lg:pb-1.5 lg:mx-2.5 w-fit"
-                                        : "hover:border-gray-700 lg:border-b mb-4 lg:mb-0 lg:pb-1.5 border-transparent lg:mx-2.5 w-fit"
+                                        ? "mb-4 lg:mb-0 lg:mx-3 lg:border-b lg:border-gray-700 lg:pb-1.5 relative top-1"
+                                        : "mb-4 lg:mb-0 lg:mx-3"
                                 }
                             >
                                 Home
@@ -94,8 +94,8 @@ function App({ navigationItems }) {
                                         isPending
                                             ? "pending"
                                             : isActive
-                                            ? "lg:border-b lg:border-gray-700 mb-4 lg:mb-0 lg:pb-1.5 lg:mx-2.5 w-fit"
-                                            : "hover:border-gray-700 lg:border-b mb-4 lg:mb-0 lg:pb-1.5 border-transparent lg:mx-2.5 w-fit"
+                                            ? "mb-4 lg:mb-0 lg:mx-3 lg:border-b lg:border-gray-700 lg:pb-1.5 relative top-1"
+                                            : "mb-4 lg:mb-0 lg:mx-3"
                                     }
                                 >
                                     {item}
@@ -109,8 +109,8 @@ function App({ navigationItems }) {
                                     isPending
                                         ? "pending"
                                         : isActive
-                                        ? "lg:border-b lg:border-gray-700 mb-4 lg:mb-0 lg:pb-1.5 lg:mx-2.5 w-fit lg:hidden"
-                                        : "hover:border-gray-700 lg:border-b mb-4 lg:mb-0 lg:pb-1.5 border-transparent lg:mx-2.5 w-fit lg:hidden"
+                                        ? "mb-4 lg:mb-0 lg:mx-3 lg:hidden"
+                                        : "mb-4 lg:mb-0 lg:mx-3 lg:hidden"
                                 }
                             >
                                 Cart
@@ -162,7 +162,7 @@ function App({ navigationItems }) {
                         </svg>
                         <div className="absolute">
                             {cartCounter > 0 ? (
-                                <span className="washed-gray-bg text-white text-xs relative bottom-9 left-4 py-0.5 px-1.5 rounded-full">
+                                <span className="bg-white text-black border text-xs relative bottom-9 left-4 py-0.5 px-1.5 rounded-full">
                                     {cartCounter}
                                 </span>
                             ) : (

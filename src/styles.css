@@ -4,6 +4,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Fonts */
+@font-face {
+    font-family: "harmonia_sans_bold";
+    src: url("./fonts/harmonia_sans_bold.woff2");
+}
+
+@font-face {
+    font-family: "harmonia_sans_normal";
+    src: url("./fonts/harmonia_sans_normal.woff2");
+}
+
+/* Background colors */
+
 .light-gray-bg-custom {
     background: rgb(245 246 247);
 }
@@ -94,8 +107,10 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /* Product page */
 
-.lazyimage {
+.product-image {
     display: flex !important;
     justify-content: center;
+    align-items: center;
     margin-right: 0px;
+    max-width: 451px;
 }

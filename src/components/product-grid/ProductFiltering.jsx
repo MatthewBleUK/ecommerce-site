@@ -97,7 +97,7 @@ const ProductFiltering = ({ products, setFilteredProducts }) => {
     };
 
     return (
-        <>
+        <div className="sticky top-36 z-9">
             <div className="flex justify-between">
                 <h2 className="text-4xl font-light mb-6">Filter by</h2>
 
@@ -199,7 +199,7 @@ const ProductFiltering = ({ products, setFilteredProducts }) => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 
