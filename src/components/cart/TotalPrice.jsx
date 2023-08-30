@@ -10,7 +10,10 @@ function TotalPrice({ cartItems }) {
     // Calculate total price of items in the cart
     const calculateTotalPrice = () => {
         const totalPrice = cartItems.reduce((total, item) => {
-            return total + parseFloat(item.total_price);
+            return (
+                total +
+                parseFloat(item.total_discounted_price || item.total_price)
+            );
         }, 0);
 
         setTotalPrice(totalPrice.toFixed(2));

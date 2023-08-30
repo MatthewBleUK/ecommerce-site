@@ -16,21 +16,28 @@ function CartTable({ cartItems, setCartItems }) {
     // Handle quantity change for an item in the cart
     const handleQuantityChange = (event, id) => {
         const updatedCart = [...cartItems];
-        const newQuantity = event.target.value;
+        const quantity = event.target.value;
 
         const index = updatedCart.findIndex((item) => item.id === id);
 
-        if (newQuantity !== "") {
-            updatedCart[index].quantity = Number(newQuantity);
+        if (quantity !== "") {
+            let price = 0;
+
+            updatedCart[index].quantity = Number(quantity);
+
+            if (updatedCart[index].discounted_price) {
+                price =
+                    updatedCart[index].discounted_price * event.target.value;
+            } else {
+                price = updatedCart[index].price * event.target.value;
+            }
 
             // Update total price
-            updatedCart[index].total_price = (
-                updatedCart[index].price * event.target.value
-            ).toFixed(2);
+            updatedCart[index].total_price = price.toFixed(2);
         }
 
         // Remove item if equals 0 quantity
-        if (newQuantity === "0") {
+        if (quantity === "0") {
             updatedCart.splice(index, 1);
         }
 
@@ -102,9 +109,21 @@ function CartTable({ cartItems, setCartItems }) {
                                             {product.title}
                                         </span>
                                     </a>
-                                    <span className="pt-2">
-                                        ${product.price}
-                                    </span>
+
+                                    {product.discounted_price ? (
+                                        <div>
+                                            <span className="pt-2 line-through mr-2">
+                                                ${product.price}
+                                            </span>
+                                            <span className="pt-2 text-emerald-600">
+                                                ${product.discounted_price}
+                                            </span>
+                                        </div>
+                                    ) : (
+                                        <span className="pt-2">
+                                            ${product.price}
+                                        </span>
+                                    )}
                                 </div>
                             </div>
                         </td>

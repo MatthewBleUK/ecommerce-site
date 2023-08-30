@@ -86,6 +86,10 @@
 }
 
 /* Override toast colors */
+.Toastify__toast {
+    position: relative;
+    top: 16px;
+}
 
 .Toastify__progress-bar--success {
     background: #079669;

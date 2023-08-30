@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import TotalPrice from "./TotalPrice";
 import CartTable from "./CartTable";
 import CheckOutButton from "./CheckOutButton";
@@ -56,10 +57,16 @@ function Cart() {
                         item.quantity * product.price
                     ).toFixed(2);
 
+                    if (product.discounted_price) {
+                        var totalDiscountedPrice = (
+                            item.quantity * product.discounted_price
+                        ).toFixed(2);
+                    }
+
                     return {
                         ...product,
                         quantity: item.quantity,
-                        total_price: parseFloat(totalProductPrice),
+                        total_price: totalDiscountedPrice || totalProductPrice,
                     };
                 })
             );
