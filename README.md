@@ -17,10 +17,10 @@ This is a full stack e-commerce site built using Vite React, Tailwind CSS, Expre
 ## Screenshots
 
 <!-- Desktop screenshots -->
-<img src="./screenshots/Screenshot_1.png" alt="A screenshot displaying the design's header, category title and description and product grid with filtering and sort by features" width="800px">
+<img src="./screenshots/category-page.png" alt="A screenshot displaying the design's header, category title and description and product grid with filtering and sort by features" width="800px">
 
 <!-- Mobile screenshots -->
-<img src="./screenshots/Mobile_nav_close.png" alt="A screenshot of the mobile responsive design showing that the mobile nav menu is closed" width="400px">
+<img src="./screenshots/mobile-category-page.png" alt="A screenshot of the mobile responsive design showing that the mobile nav menu is closed" width="400px">
 
 ## Installation
 
