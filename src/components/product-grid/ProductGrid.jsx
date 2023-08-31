@@ -110,8 +110,8 @@ function ProductGrid({ category }) {
                 </div>
 
                 <div className="flex flex-col w-full">
-                    <div className="flex justify-end md:justify-between items-center text-sm mb-2">
-                        <div className="hidden md:block">
+                    <div className="flex justify-end sm:justify-between items-center text-sm mb-2">
+                        <div className="hidden sm:block">
                             <ProductCounter
                                 total={getCategoryProducts().length}
                             />

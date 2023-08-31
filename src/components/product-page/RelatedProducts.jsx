@@ -40,7 +40,7 @@ function RelatedProducts({ category }) {
                     products.products.map((product) => {
                         return (
                             <div
-                                className="flex flex-col p-4 m-4 light-gray-bg-custom w-1/5 min-w-[100%] sm:min-w-[40%] lg:min-w-[200px]"
+                                className="flex flex-col p-4 m-4 ml-0 light-gray-bg-custom w-1/5 min-w-[50%] sm:min-w-[40%] lg:min-w-[200px]"
                                 key={product.id}
                             >
                                 <a
@@ -67,7 +67,7 @@ function RelatedProducts({ category }) {
                                 </p>
 
                                 {product.discounted_price ? (
-                                    <div className="float-left pt-3 pb-3">
+                                    <div className="flex flex-col sm:flex-row float-left pt-3 pb-3">
                                         <span className="text-base line-through pr-2">
                                             ${product.price}
                                         </span>

@@ -44,6 +44,8 @@ function ProductPage() {
                                         alt={product.description}
                                         className=""
                                         wrapperClassName="product-image mb-8 lg:mb-0"
+                                        width={400}
+                                        height={400}
                                     />
                                 </div>
 
